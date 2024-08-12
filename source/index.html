@@ -11,7 +11,22 @@
     <title>"Высший пилотаж"</title>
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="page-header">
+      <div class="page-header__container">
+        <nav class="main-nav">
+          <button class="main-nav__toggle main-nav__toggle-off" type="button">
+            <svg class="main-nav__cross-icon" width="22" height="22">
+              <use  xlink:href="#icon-cross"></use>
+            </svg>
+            <span class="visually-hidden">Закрыть меню</span>
+          </button>
+          <ul class="maim-nav__list site-list default-list">
+            <li class="site-list__item site-list__item--active"><a>Главная</a></li>
+            <li class="site-list__item"><a href="gallery.html">Галерея</a></li>
+            <li class="site-list__item"><a href="info.html">Информация</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="main-container">
     </main>
