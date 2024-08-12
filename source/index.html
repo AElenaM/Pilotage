@@ -12,20 +12,34 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__container">
-        <nav class="main-nav">
-          <button class="main-nav__toggle main-nav__toggle-off" type="button">
-            <svg class="main-nav__cross-icon" width="22" height="22">
-              <use  xlink:href="#icon-cross"></use>
+      <div class="page-header__wrapper">
+        <div class="page-header__container">
+          <nav class="main-nav">
+            <button class="main-nav__toggle main-nav__toggle-off" type="button">
+              <svg class="main-nav__cross-icon" width="22" height="22">
+                <use  xlink:href="#icon-cross"></use>
+              </svg>
+              <span class="visually-hidden">Закрыть меню</span>
+            </button>
+            <ul class="maim-nav__list site-list default-list">
+              <li class="site-list__item site-list__item--active"><a>Главная</a></li>
+              <li class="site-list__item"><a href="gallery.html">Галерея</a></li>
+              <li class="site-list__item"><a href="info.html">Информация</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="page-header__button">
+          <button class="main-nav__toggle main-nav__toggle-on" type="button">
+            <svg class="main-nav__menu-icon" width="23" height="22">
+              <use  xlink:href="#icon-menu"></use>
             </svg>
-            <span class="visually-hidden">Закрыть меню</span>
+            <span class="visually-hidden">Открыть меню</span>
           </button>
-          <ul class="maim-nav__list site-list default-list">
-            <li class="site-list__item site-list__item--active"><a>Главная</a></li>
-            <li class="site-list__item"><a href="gallery.html">Галерея</a></li>
-            <li class="site-list__item"><a href="info.html">Информация</a></li>
-          </ul>
-        </nav>
+        </div>
+        <div class="page-header__hero page-header__hero--home">
+          <h2 class="visually-hidden">Высший пилотаж</h2>
+          <img src="#" alt="Главное изображение Высший пилотаж" width="281" height="214">
+        </div>
       </div>
     </header>
     <main class="main-container">
