@@ -597,6 +597,33 @@
           </div>
         </div>
       </section>
+      <section class="popup">
+        <button onclick="openPopup()">Открыть всплывающее окно</button>
+        <div class="popup__info">
+          <button onclick="closePopup()">Закрыть</button>
+          <h3 class="popup__title">Оставить заявку на экскурсию</h3>
+          <div class="feedback-container">
+            <div class="form-field">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" placeholder="Мой e-mail" disabled>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" placeholder="Введите номер телефона.." disabled>
+          </div>
+          <div class="form-field">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" placeholder="Ваше имя..." disabled>
+          </div>
+          <div class="form-field">
+            <label for="comments">Крмментарий:</label>
+            <textarea id="comments" placeholder="Напишите Ваш комментарий..." disabled>
+            </textarea>
+          </div>
+          <a href="#" class="submit-button">Отправить</a>
+        </div>
+      </section>
     </main>
     <footer class="main-footer">
     </footer>
