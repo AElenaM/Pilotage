@@ -38,7 +38,11 @@
         </div>
         <div class="page-header__hero page-header__hero--home">
           <h2 class="visually-hidden">Высший пилотаж</h2>
-          <img src="#" alt="Главное изображение Высший пилотаж" width="281" height="214">
+          <picture>
+            <source type="image/png" media="(min-width: 1440px)" srcset="images/logo_pilotage@1x.png 1x, images/logo_pilotage@2x.png 2x" >
+            <source type="image/png" media="(min-width: 768px)" srcset="images/logo_pilotage@1x.png 1x, images/logo_pilotage@2x.png 2x" >
+            <img src="images/logo_pilotage@1x.png" srcset="images/logo_pilotage@2x.png 2x" width="320" height="280" alt="">
+          </picture>
         </div>
       </div>
     </header>

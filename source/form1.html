@@ -38,25 +38,33 @@
         </div>
         <div class="page-header__hero page-header__hero--home">
           <h2 class="visually-hidden">Высший пилотаж</h2>
-          <img src="#" alt="Главное изображение Высший пилотаж" width="281" height="214">
+          <picture>
+            <source type="image/png" media="(min-width: 1440px)" srcset="images/logo_pilotage@1x.png 1x, images/logo_pilotage@2x.png 2x" >
+            <source type="image/png" media="(min-width: 768px)" srcset="images/logo_pilotage@1x.png 1x, images/logo_pilotage@2x.png 2x" >
+            <img src="images/logo_pilotage@1x.png" srcset="images/logo_pilotage@2x.png 2x" width="320" height="280" alt="">
+          </picture>
         </div>
       </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">ГОРОД У КРАСНОГО ЯРА 6+(обзорная экскурсия по городу)</h1>
       <section class="page-main__excursion excursion">
-        <div class="excursion-wrapper">
-          <div class="excursion-header">
-            <img class="excursion-header-item" src="#" alt="ГОРОД У КРАСНОГО ЯРА 6+" width="320" height="260">
-            <p class="excursion-header-item--description">
+        <div class="excursion__wrapper">
+          <div class="excursion__header">
+            <picture class="excursion-header__item">
+              <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/1/krasnij_jar-hero@1x.jpeg 1x, images/1/krasnij_jar-hero@2x.jpeg 2x">
+              <source type="image/jpeg" media="(min-width: 768px)" srcset="images/1/krasnij_jar-hero@1x.jpeg 1x, images/1/krasnij_jar-hero@2x.jpeg 2x">
+              <img src="images/1/krasnij_jar-hero@1x.jpeg" srcset="images/1/krasnij_jar-hero@2x.jpeg 2x" width="320" height="auto" alt="ГОРОД У КРАСНОГО ЯРА 6+">
+            </picture>
+            <p class="excursion-header__item--description">
               Красноярск - удивительный город, с богатой историей, уникальным обликом, потрясающе красивой природой. Что бы по настоящему полюбить город нужно его узнать. Поэтому на наши обзорные экскурсии ездят детки начиная с детского сада. 
               Особый подход и многолетний опыт не дают ребятам скучать. По мимо новых знаний ребята окунаются в путешествие наполненное играми, песнями, которое делает детский коллектив крепче и дружнее. Мы посещаем самые красивые места города, делаем памятные фото, весело общаемся и расширяем кругозор.
             </p>
-            <p class="excursion-header-item--price">
+            <p class="excursion-header__item--price">
               Стоимость для групп от 25 человек: 900 руб/чел.
               Иногородние группы (Железногорск, Сосновоборск) +300 руб/чел.
             </p>
-            <p class="excursion-header-item--info">
+            <p class="excursion-header__item--info">
               В стоимость включено: автобус от школы/детского сада, экскурсионная программа, фотограф (фото в электронном виде), именные грамоты, видеоролик.
             </p>
           </div>
