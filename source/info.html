@@ -13,42 +13,28 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <div class="page-header__container">
+        <div class="page-header-container">
           <nav class="main-nav">
-            <button class="main-nav__toggle main-nav__toggle-off" type="button">
-              <svg class="main-nav__cross-icon" width="22" height="22">
-                <use  xlink:href="#icon-cross"></use>
-              </svg>
-              <span class="visually-hidden">Закрыть меню</span>
-            </button>
             <ul class="maim-nav__list site-list default-list">
               <li class="site-list__item"><a href="index.html">Главная</a></li>
-              <li class="site-list__item site-list__item--active"><a>О нас</a></li>
+              <li class="site-list__item"><a href="info.html">О нас</a></li>
               <li class="site-list__item"><a href="tours.html">Туры в Красноярск</a></li>
             </ul>
           </nav>
         </div>
-        <div class="page-header__button">
-          <button class="main-nav__toggle main-nav__toggle-on" type="button">
-            <svg class="main-nav__menu-icon" width="23" height="22">
-              <use  xlink:href="#icon-menu"></use>
-            </svg>
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-        </div>
-        <div class="page-header__hero page-header__hero--home">
+        <div class="page-header__hero hero page-header__hero--home">
           <h2 class="visually-hidden">Высший пилотаж</h2>
           <picture>
-            <source type="image/png" media="(min-width: 1440px)" srcset="images/logo_pilotage@1x.png 1x, images/logo_pilotage@2x.png 2x" >
-            <source type="image/png" media="(min-width: 768px)" srcset="images/logo_pilotage@1x.png 1x, images/logo_pilotage@2x.png 2x" >
+            <source type="image/png" media="(min-width: 1440px)" srcset="images/logo_pilotage@1x.png, images/logo_pilotage@2x.png 2x">
+            <source type="image/png" media="(min-width: 768px)" srcset="images/logo_pilotage@1x.png, images/logo_pilotage@2x.png 2x">
             <img src="images/logo_pilotage@1x.png" srcset="images/logo_pilotage@2x.png 2x" width="320" height="280" alt="">
           </picture>
         </div>
       </div>
     </header>
-    <main class="page-main">
+    <main class="page-main-info">
       <h1 class="page-main__about">Наши экскурсии порадуют качеством и детским восторгом</h1>
-      <h2 class="page-main-info">
+      <h2 class="page-main__advantages">
         Индивидуальные условия для образовательных учреждений.
         <br>Мы ценим время и труд образовательных учреждений, которые берут на себя роль инициатора познавательных экскурсий для детей. Поэтому разработали систему благодарности и «кэшбэка». При этом стоимость экскурсии не изменяется, поэтому даже если родители самостоятельно закажут экскурсию на нашем сайте, стоимость будет абсолютно такой же.
         <p class="page-main-info--bold">Вознаграждение для образовательных учреждений 10%.</p>
@@ -159,13 +145,22 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="https://github.com/AElenaM" target="_blank" title="Elena C.">
-            <span class="visually-hidden">Elena C.</span>
-            <svg class="copyright__logo" width="27" height="34">
-              <use xlink:href="#icon-EC"></use>
-            </svg>
-          </a>
+          <ul class="copyright__list">
+            <li class="copyright__item">
+              <a href="#">
+                <img src="" alt="Logo polotage">
+              </a>
+            </li>
+            <li class="copyright__item">
+              <b class="copyright__text">Разработано</b>
+              <a class="copyright__link" href="https://github.com/AElenaM" target="_blank" title="Elena C.">
+              <span class="visually-hidden">Elena C.</span>
+              <svg class="copyright__logo" width="27" height="34">
+                <use xlink:href="#icon-EC"></use>
+              </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

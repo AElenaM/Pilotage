@@ -14,14 +14,8 @@
     <script src="scripts/index.js"></script>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <div class="page-header__container">
+        <div class="page-header-container">
           <nav class="main-nav">
-            <button class="main-nav__toggle main-nav__toggle-off" type="button">
-              <svg class="main-nav__cross-icon" width="22" height="22">
-                <use  xlink:href="#icon-cross"></use>
-              </svg>
-              <span class="visually-hidden">Закрыть меню</span>
-            </button>
             <ul class="maim-nav__list site-list default-list">
               <li class="site-list__item site-list__item--active"><a>Главная</a></li>
               <li class="site-list__item"><a href="info.html">О нас</a></li>
@@ -29,15 +23,7 @@
             </ul>
           </nav>
         </div>
-        <div class="page-header__button">
-          <button class="main-nav__toggle main-nav__toggle-on" type="button">
-            <svg class="main-nav__menu-icon" width="23" height="22">
-              <use  xlink:href="#icon-menu"></use>
-            </svg>
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-        </div>
-        <div class="page-header__hero page-header__hero--home">
+        <div class="page-header__hero hero page-header__hero--home">
           <h2 class="visually-hidden">Высший пилотаж</h2>
           <picture>
             <source type="image/png" media="(min-width: 1440px)" srcset="images/logo_pilotage@1x.png 1x, images/logo_pilotage@2x.png 2x" >
@@ -63,7 +49,7 @@
               <li class="features__foreword-item">ДЕТИ НАС ЛЮБЯТ <br>И это взаимно!  </li>
             </ul>
           </div>
-          <div class="features__program">
+          <div class="features-program">
             <h3 class="features__program-title">
               Наши программы
             </h3>
@@ -394,21 +380,21 @@
               <label for="name" class="visually-hidden">Имя:</label>
               <input type="text" id="name" placeholder="Ваше имя">
             </div>
+            <div class="form-field">
+              <label for="phone" class="visually-hidden">Ваш телефон:</label>
+              <input type="tel" id="phone" placeholder="Ваш телефон">
+            </div>
+            <div class="form-field">
+              <label for="comment" class="textarea-label visually-hidden">Комментарий:</label>
+              <textarea id="comment" class="textarea-input" placeholder="Ваш комментарий...">
+              </textarea>
+            </div>
+            <a href="#" class="submit-button">Жду звонка</a>
+            <p class="feedback-container__checkbox checkbox">
+              <input type="checkbox" id="checkbox" class="checkbox__custom">
+              <label for="checkbox" class="checkbox__label">Отправляя сведения через электронную форму, Вы даёте согласие на обработку данных.</label>
+            </p>
           </div>
-          <div class="form-field">
-            <label for="phone" class="visually-hidden">Ваш телефон:</label>
-            <input type="tel" id="phone" placeholder="Ваш телефон">
-          </div>
-          <div class="form-field">
-            <label for="comment" class="textarea-label visually-hidden">Комментарий:</label>
-            <textarea id="comment" class="textarea-input" placeholder="Ваш комментарий...">
-            </textarea>
-          </div>
-          <a href="#" class="submit-button">Жду звонка</a>
-          <p class="feedback-container__checkbox checkbox">
-            <input type="checkbox" id="checkbox" class="checkbox-custom">
-            <label for="checkbox" class="checkbox-label">Отправляя сведения через электронную форму, Вы даёте согласие на обработку данных.</label>
-          </p>
         </div>
       </section>
     </main>
@@ -456,13 +442,13 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <ul class="copyright-list">
-            <li class="copyright-item">
+          <ul class="copyright__list">
+            <li class="copyright__item">
               <a href="#">
                 <img src="" alt="Logo polotage">
               </a>
             </li>
-            <li class="copyright-item">
+            <li class="copyright__item">
               <b class="copyright__text">Разработано</b>
               <a class="copyright__link" href="https://github.com/AElenaM" target="_blank" title="Elena C.">
               <span class="visually-hidden">Elena C.</span>
