@@ -1,6 +1,6 @@
 body {
   font-family: $primary-font, $second-font;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
   font-weight: 400;
   color: $base-color-text-grey;
@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $bg-basic-blue;
+  background-color: $bg-basic-gray;
 }
 
 @media (min-width:$tablet-min-width) and (max-with:$tablet-max-width) {
@@ -40,6 +40,9 @@ body {
   .page__body {
     width: 80%;
     max-width: desktop-max-width;
-
   }
+}
+
+a {
+  text-decoration: none;
 }

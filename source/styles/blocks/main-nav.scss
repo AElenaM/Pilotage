@@ -1,0 +1,22 @@
+.maim-nav__list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  flex-wrap: nowrap;
+  padding: 0px;
+  font-weight: 600;
+  line-height: 14px;
+  font-family: $second-font;
+}
+
+.site-list__item {
+  // border: 2px solid rgb(135, 188, 221);
+  // border-radius: 4px;
+  padding: 8px;
+  // background-color: $bg-blue;
+  list-style-type: none;
+}
+
+.site-list__item--link {
+
+}

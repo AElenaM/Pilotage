@@ -1,0 +1,16 @@
+.page-main__about {
+  font-family: $second-font;
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: $base-color-text-black;
+  margin-bottom: 15px;
+}
+
+.page-main__about-line {
+  height: 7px;
+  background: linear-gradient(to right, #21a3d7, #feb47b);
+  margin: 20px;
+  border-radius: 5px;
+}
