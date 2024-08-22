@@ -4,4 +4,42 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: $base-color-text-grey;
+  width: $mobile-only-width;
+  height: 100%;
+  margin: auto;
+  font-style: normal;
+  text-transform: uppercase;
+  background-color: $base-color-text-white;
+}
+
+.container {
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-basic-blue;
+}
+
+@media (min-width:$tablet-min-width) and (max-with:$tablet-max-width) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .page__body {
+    width: 90%;
+  };
+}
+
+@media (min-width:$desktop-min-width) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .page__body {
+    width: 80%;
+    max-width: desktop-max-width;
+
+  }
 }
