@@ -1,0 +1,24 @@
+.back-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  display: none; /* Скрыто по умолчанию */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #0056b3;
+}
+
+@media (min-width:$desktop-min-width) {
+  .back-to-top {
+    display: none;
+  }
+}

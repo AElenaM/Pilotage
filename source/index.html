@@ -46,6 +46,7 @@
                 <li class="features__foreword-item">БЕЗОПАСНОСТЬ</li>
                 <li class="features__foreword-item">КАЧЕСТВО </li>
                 <li class="features__foreword-item">ЛУЧШИЕ ЦЕНЫ </li>
+                <li class="features__foreword-item">Согласование с ГИБДД</li>
                 <li class="features__foreword-item">РАБОТА С РОДИТЕЛЯМИ</li>
                 <li class="features__foreword-item">ДЕТИ НАС ЛЮБЯТ И это взаимно!  </li>
               </ul>
@@ -368,35 +369,34 @@
             </div>
           </div>
         </section>
-        <section class="popup">
-          <button onclick="openPopup()">Открыть всплывающее окно</button>
-          <div class="popup__info">
-            <button onclick="closePopup()">Закрыть</button>
-            <h3 class="popup__title">Это заявка для группового посещения от 25 детей.
+        <section class="feedback">
+          <div class="feedback__container">
+            <h3 class="feedback__title">Это заявка для группового посещения от 25 детей.
               <br>Если вы планируете посещение в индивидуальном порядке,
               позвоните нам по телефону 89138387770
             </h3>
-            <div class="feedback-container">
-              <div class="form-field">
-                <label for="name" class="visually-hidden">Имя:</label>
-                <input type="text" id="name" placeholder="Ваше имя">
-              </div>
-              <div class="form-field">
-                <label for="phone" class="visually-hidden">Ваш телефон:</label>
-                <input type="tel" id="phone" placeholder="Ваш телефон">
-              </div>
-              <div class="form-field">
-                <label for="comment" class="textarea-label visually-hidden">Комментарий:</label>
-                <textarea id="comment" class="textarea-input" placeholder="Ваш комментарий...">
-                </textarea>
-              </div>
-              <a href="#" class="submit-button">Жду звонка</a>
-              <p class="feedback-container__checkbox checkbox">
-                <input type="checkbox" id="checkbox" class="checkbox__custom">
-                <label for="checkbox" class="checkbox__label">Отправляя сведения через электронную форму, Вы даёте согласие на обработку данных.</label>
-              </p>
+            <div class="form-field">
+              <label for="name" class="visually-hidden">Имя:</label>
+              <input type="text" id="name" placeholder="Ваше имя">
             </div>
+            <div class="form-field">
+              <label for="phone" class="visually-hidden">Ваш телефон:</label>
+              <input type="tel" id="phone" placeholder="Ваш телефон">
+            </div>
+            <div class="form-field">
+              <label for="comment" class="textarea-label"></label>
+              <textarea id="comment" class="textarea-input" placeholder="Ваш комментарий...">
+              </textarea>
+            </div>
+            <a href="#" class="submit-button">Жду звонка</a>
+            <p class="feedback-container__checkbox checkbox">
+              <input type="checkbox" id="checkbox" class="checkbox__custom">
+              <label for="checkbox" class="checkbox__label">Отправляя сведения через электронную форму, Вы даёте согласие на обработку данных.</label>
+            </p>
           </div>
+        </section>
+        <section class="scroll">
+          <button class="back-to-top" onclick="scrollToTop()">Наверх</button>
         </section>
       </main>
       <footer class="page-footer">
@@ -463,6 +463,7 @@
         </div>
       </footer>
     </div>
+    <script src="scripts/back-to-top.js"></script>
     <script src="scripts/index.js"></script>
   </body>
 </html>
