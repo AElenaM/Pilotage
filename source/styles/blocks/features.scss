@@ -2,6 +2,32 @@
   font-family: $second-font;
   font-size: 18px;
   line-height: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-weight: 600;
+  color: $base-color-text-black;
+  text-transform: $text-uppercase;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.features__foreword-list {
+  list-style-type: none;
+  font-family: $primary-font;
+  text-transform: $text-uppercase;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.features__foreword-item {
+  background-color: $bg-basic-gray;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  // border: 2px solid rgb(135, 188, 221);
+  border-radius: 4px;
+  text-align: center;
+  // max-width: fit-content;
+  margin-bottom: 10px;
 }

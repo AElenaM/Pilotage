@@ -4,6 +4,8 @@ $base-color-text-black: #000000;
 $base-color-text-white: #ffffff;
 $bg-basic-gray: #b8c4c46b;
 $bg-blue: #9ed3ea6b;
+$bg-linear-gradient: linear-gradient(to right, #21a3d7, #feb47b);
+
 $text-uppercase: uppercase;
 $text-lowercase: lowercase;
 
@@ -11,4 +13,5 @@ $mobile-only-width: 360px;
 $tablet-min-width: 768px;
 $tablet-max-width: 1025px;
 $desktop-min-width: 1025px;
-$desktop-min-width: 1400px;
+$desktop-max-width: 1400px;
+

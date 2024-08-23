@@ -1,0 +1,41 @@
+.features__program-title {
+  font-family: $second-font;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  color: $base-color-text-black;
+  text-transform: $text-uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+.features__program-about {
+  font-family: $primary-font;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  color: $base-color-text-grey;
+  text-transform: $text-lowercase;
+  text-align: left;
+  margin: 10px;
+  padding: 0 10px;
+}
+
+.features__program-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0 20px;
+  margin: 0;
+}
+
+@media (min-width:$desktop-min-width) {
+  .features__program-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
