@@ -5,3 +5,23 @@
   color: $base-color-text-grey;
   list-style-type: none;
 }
+
+.social__list {
+  width: max-content;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  align-items: center;
+  list-style-type: none;
+}
+
+.social__item {
+  margin: 10px;
+}
+
+.site-list__item--link-share {
+  margin: 0;
+  fill: $bg-dark-blue;
+
+}
+

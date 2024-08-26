@@ -3,18 +3,17 @@
   bottom: 100px;
   right: 30px;
   display: none; /* Скрыто по умолчанию */
-  background-color: $bg-blue;
-  color: $base-color-text-white;
+  fill: $bg-dark-salomon;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 0;
   cursor: pointer;
   font-size: 16px;
   z-index: 1000;
+  background-color: transparent;
 }
 
 .back-to-top:hover {
-  background-color: #0056b3;
+  fill: $bg-salomon;
 }
 
 @media (min-width: $desktop-min-width) {

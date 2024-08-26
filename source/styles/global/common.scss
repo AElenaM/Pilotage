@@ -54,7 +54,7 @@ body {
 
 a {
   text-decoration: none;
-
+  cursor: pointer;
   color: inherit;
 }
 
@@ -68,7 +68,6 @@ a:hover {
 
 button {
   text-decoration: none;
-
   color: inherit;
 }
 
@@ -78,4 +77,25 @@ button:focus {
 
 button:hover {
   color: $bg-blue;
+}
+
+input {
+  outline: none;
+  font-family: $primary-font;
+  font-size: 10px;
+  padding: 2px;
+  color: $base-color-text-grey;
+  width: 50%;
+}
+
+textarea {
+  outline: none;
+  font-family: $primary-font;
+  font-size: 10px;
+  color: $base-color-text-grey;
+  padding: 2px;
+  width: 50%;
+}
+
+textarea::placeholder {
 }

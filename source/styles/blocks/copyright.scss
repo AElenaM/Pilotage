@@ -2,5 +2,33 @@
   display: flex;
   flex-wrap: nowrap;
   list-style-type: none;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.copyright__item {
+  max-width: max-content;
+  font-family: $second-font;
+  align-items: center;
+  font-size: 10px;
+}
+
+.copyright__link{
+  font-family: $second-font;
+  font-size: 10px;
+  font-weight: 800;
+  text-decoration: $text-lowercase;
+  color: $bg-dark-blue;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.copyright__link:hover {
+  color: $bg-salomon;
+}
+
+.copyright__link:focus {
+  color: $bg-dark-salomon;
 }
