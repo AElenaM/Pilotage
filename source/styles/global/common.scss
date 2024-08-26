@@ -29,21 +29,23 @@ body {
   // word-wrap: break-word;
 }
 
-@media (min-width:$tablet-min-width) and (max-with:$tablet-max-width) {
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   body {
     font-size: 16px;
     line-height: 24px;
   }
+
   .page__body {
     width: 90%;
-  };
+  }
 }
 
-@media (min-width:$desktop-min-width) {
+@media (min-width: $desktop-min-width) {
   body {
     font-size: 16px;
     line-height: 24px;
   }
+
   .page__body {
     width: 80%;
     max-width: desktop-max-width;
@@ -55,9 +57,25 @@ a {
 
   color: inherit;
 }
+
 a:focus {
   color: $base-color-text-white;
 }
+
 a:hover {
+  color: $bg-blue;
+}
+
+button {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+button:focus {
+  color: $base-color-text-white;
+}
+
+button:hover {
   color: $bg-blue;
 }

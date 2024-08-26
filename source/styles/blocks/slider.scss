@@ -11,7 +11,7 @@
 .sliders-images {
   display: flex;
   transition: transform 0.5s
-ease-in-out;
+  ease-in-out;
 }
 
 .sliders-images__item {
@@ -26,15 +26,16 @@ ease-in-out;
   object-fit: contain;
 }
 
-.button--click-previous, .button--click-next {
+.button--click-previous,
+.button--click-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: $base-color-text-white;
   border: none;
   padding: 10px;
-  cursor:pointer;
+  cursor: pointer;
   border-radius: 50%;
 }
 
@@ -46,7 +47,8 @@ ease-in-out;
   right: 10px;
 }
 
-.button--click-previous:hover, .button--click-next:hover {
+.button--click-previous:hover,
+.button--click-next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 

@@ -3,8 +3,8 @@
   bottom: 100px;
   right: 30px;
   display: none; /* Скрыто по умолчанию */
-  background-color: #007bff;
-  color: white;
+  background-color: $bg-blue;
+  color: $base-color-text-white;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -17,7 +17,7 @@
   background-color: #0056b3;
 }
 
-@media (min-width:$desktop-min-width) {
+@media (min-width: $desktop-min-width) {
   .back-to-top {
     display: none;
   }

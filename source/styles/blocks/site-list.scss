@@ -1,0 +1,8 @@
+.site-list__item--link-share {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.site-list__item--link-share:hover {
+  fill: $bg-blue;
+}

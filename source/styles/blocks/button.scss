@@ -1,0 +1,21 @@
+// .button {
+//   display: inline-block;
+//   cursor: pointer;
+//   fill: aqua;
+// }
+
+// .button:hover {
+//   fill: $bg-blue;
+// }
+
+// .button__fill {
+//   fill: $bg-blue;
+
+// }
+
+.social__list {
+display: flex;
+flex-direction: column;
+justify-items: baseline;
+ justify-content: space-around;
+}
