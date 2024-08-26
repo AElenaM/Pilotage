@@ -18,3 +18,7 @@
   list-style-type: none;
 }
 
+.site-list__item--active {
+  text-decoration: underline;
+  font-weight: 800px;
+}
