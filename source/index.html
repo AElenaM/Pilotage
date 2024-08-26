@@ -21,8 +21,8 @@
                 <li class="site-list__item"><a class="site-list__item--link" href="info.html">О нас</a site-list__item--link></li>
                 <li class="site-list__item"><a class="site-list__item--link" href="tours.html">Туры в Красноярск</a></li>
                 <li class="site-list__item">
-                  <a class="site-list__item--link">
-                    <svg class="site-list__item--link-share" width="10" height="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.33 14.67a4.66 4.66 0 0 0-3.84 2.02l-6.5-2.94a4.57 4.57 0 0 0 0-3.49l6.5-2.95a4.66 4.66 0 1 0-.83-2.64 4.63 4.63 0 0 0 .08.78l-6.9 3.14a4.67 4.67 0 1 0-.02 6.83l6.93 3.13a4.74 4.74 0 0 0-.08.78 4.67 4.67 0 1 0 4.66-4.66Zm0-12.67a2.67 2.67 0 1 1-2.66 2.67 2.67 2.67 0 0 1 2.66-2.67Zm-14.66 12.67a2.67 2.67 0 1 1 2.66-2.67 2.67 2.67 0 0 1-2.66 2.67Zm14.66 7.33a2.67 2.67 0 1 1 2.67-2.67 2.67 2.67 0 0 1-2.67 2.67Z" data-name="01 align center"/></svg>
+                  <a href="#" class="site-list__item--link share-button">
+                    <svg class="site-list__item--link-share" width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.33 14.67a4.66 4.66 0 0 0-3.84 2.02l-6.5-2.94a4.57 4.57 0 0 0 0-3.49l6.5-2.95a4.66 4.66 0 1 0-.83-2.64 4.63 4.63 0 0 0 .08.78l-6.9 3.14a4.67 4.67 0 1 0-.02 6.83l6.93 3.13a4.74 4.74 0 0 0-.08.78 4.67 4.67 0 1 0 4.66-4.66Zm0-12.67a2.67 2.67 0 1 1-2.66 2.67 2.67 2.67 0 0 1 2.66-2.67Zm-14.66 12.67a2.67 2.67 0 1 1 2.66-2.67 2.67 2.67 0 0 1-2.66 2.67Zm14.66 7.33a2.67 2.67 0 1 1 2.67-2.67 2.67 2.67 0 0 1-2.67 2.67Z" data-name="01 align center"/></svg>
                     <!-- <picture>
                       <source media="(min-width: 1440px)" srcset="images/share.svg" type="image/svg+xml">
                       <source media="(min-width: 768px)" srcset="images/share.svg" type="image/svg+xml">
@@ -380,7 +380,7 @@
         </section>
         <section class="feedback">
           <div class="feedback__container">
-            <h3 class="feedback__title">Это заявка
+            <h3 class="feedback__title">заявка
               <p class="feedback__title__lowercase">для группового посещения от 25 человек.
               <br>Если вы планируете посещение в индивидуальном порядке,
               позвоните нам по телефону 89138387770</p>
@@ -394,8 +394,8 @@
               <input type="tel" id="phone" placeholder="Ваш телефон">
             </div>
             <div class="form-field">
-              <label for="comment" class="textarea-label"></label>
-              <textarea id="comment" class="textarea-input" placeholder="Ваш комментарий...">
+              <label class="textarea-label" for="comment"></label>
+              <textarea id="comment" class="textarea-input" placeholder="Ваш комментарий">
               </textarea>
             </div>
             <a href="#" class="submit-button">Жду звонка</a>
@@ -406,10 +406,10 @@
           </div>
         </section>
         <section class="scroll">
-          <button class="back-to-top" onclick="scrollToTop()">
+          <a href="#" class="back-to-top">
             <svg width="24" higth="42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 24a12 12 0 1 0-12-12 12.01 12.01 0 0 0 12 12Zm0-22a10 10 0 1 1-10 10 10.01 10.01 0 0 1 10-10Z"/><path d="M12 8a3 3 0 0 1 1.99.75l.84.78 2.87 2.82a1 1 0 1 1-1.4 1.43l-2.88-2.83c-.19-.19-.47-.44-.76-.7a1 1 0 0 0-1.32 0c-.3.26-.57.51-.75.7l-2.89 2.83a1 1 0 0 1-1.4-1.43l2.88-2.83c.2-.2.5-.48.83-.77a2.99 2.99 0 0 1 1.99-.75Z"/></svg>
             <!-- <svg width="115" higth="15" viewBox="0 0 49 60" xmlns="http://www.w3.org/2000/svg"><path d="M19 55a5 5 0 0 0 10 0v-30.02l10.3 11.38a5.01 5.01 0 0 0 8.7-3.36c.01-6.56.02-6.1-.07-6.35a4.94 4.94 0 0 0-1.22-4.02c-20.7-22.63-19.23-22.09-21.83-22.55a4.99 4.99 0 0 0-4.5 1.47c-.1.1.62-.7-19.09 21.09a4.96 4.96 0 0 0-1.27 3.23c-.03.28-.02-1.07-.02 7.13a5.01 5.01 0 0 0 8.7 3.36c.1-.09-.14.16 10.3-11.38zm5 3a3 3 0 0 1-3-3v-3.03a4.9 4.9 0 0 0 6 0v3.03a3 3 0 0 1-3 3zm15-24.95-10-11.05v-4.03l10 11.05zm2 2.16v-4.65a5 5 0 0 0 5-.6v3.04a3 3 0 0 1-5 2.21zm-38.23-11.23c23.55-26.03 17.5-19.35 19.02-21.01.7-.75 1.73-1.1 2.73-.92 1.99.35 1.3.92 20.7 21.93a3 3 0 0 1-4.45 4.03l-12.03-13.3a1 1 0 0 0-1.74.67v32.62a3 3 0 0 1-6 0v-32.63a1 1 0 0 0-1.75-.66l-12.03 13.3a3.09 3.09 0 0 1-4.24.2 3 3 0 0 1-.2-4.23zm-.77 9.01v-3.02a4.92 4.92 0 0 0 5 .6v4.64a3 3 0 0 1-5-2.22zm7 .06v-4.03l10-11.05v4.03z"/></svg> -->
-          </button>
+          </a>
         </section>
       </main>
       <footer class="page-footer">
@@ -466,5 +466,6 @@
     </div>
     <script src="scripts/back-to-top.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/share.js"></script>
   </body>
 </html>

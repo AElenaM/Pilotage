@@ -1,23 +1,31 @@
 .back-to-top {
-  position: fixed;
-  bottom: 100px;
-  right: 30px;
-  display: none; /* Скрыто по умолчанию */
-  fill: $bg-dark-salomon;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-size: 16px;
-  z-index: 1000;
-  background-color: transparent;
+  position: fixed;        /* Фиксируем кнопку на экране */
+  bottom: 20px;           /* Отступ снизу */
+  right: 20px;            /* Отступ справа */
+  padding: 10px 15px;     /* Внутренние отступы */
+  display: none;          /* Скрываем кнопку по умолчанию */
+  transition: opacity 0.3s ease-in-out; /* Плавное появление */
+  z-index: 1000;          /* Обеспечиваем, что кнопка будет над остальными элементами */
 }
 
 .back-to-top:hover {
-  fill: $bg-salomon;
+  fill: $bg-salomon; /* Изменяем цвет фона при наведении */
+}
+
+.back-to-top.show {
+  display: block;         /* Показываем кнопку при необходимости */
 }
 
 @media (min-width: $desktop-min-width) {
   .back-to-top {
+    padding: 15px;
     display: none;
+    bottom: 50px;           /* Отступ снизу */
+    right: 170px;            /* Отступ справа */
+  }
+
+  .back-to-top svg {
+    width: 60px;
+    height: 60px;
   }
 }

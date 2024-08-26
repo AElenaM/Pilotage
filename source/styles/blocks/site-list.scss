@@ -6,3 +6,26 @@
 .site-list__item--link-share:hover {
   fill: $bg-blue;
 }
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Плавное изменение цвета фона при наведении */
+  cursor: pointer; /* Курсор в виде руки */
+}
+
+.share-button svg {
+  fill:$bg-dark-salomon; /* Цвет иконки */
+}
+
+.share-button:hover {
+  fill: $bg-blue; /* Цвет фона кнопки при наведении */
+}
+
+@media (min-width: $desktop-min-width) {
+  .share-button svg {
+    width: 40px;
+    height: 40px;
+    fill:$bg-dark-salomon; /* Цвет иконки */
+  }
+}

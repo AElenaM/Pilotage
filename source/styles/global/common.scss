@@ -87,15 +87,3 @@ input {
   color: $base-color-text-grey;
   width: 50%;
 }
-
-textarea {
-  outline: none;
-  font-family: $primary-font;
-  font-size: 10px;
-  color: $base-color-text-grey;
-  padding: 2px;
-  width: 50%;
-}
-
-textarea::placeholder {
-}

@@ -6,3 +6,25 @@
   text-transform: none;
   border: none;
 }
+
+textarea {
+  outline: none;
+  font-family: $primary-font;
+  font-size: 10px;
+  color: $base-color-text-grey;
+  padding: 2px;
+  width: 50%;
+}
+
+textarea::placeholder {
+  color: #b71010;
+  opacity: 1;
+}
+
+.textarea-input {
+  background-color: $bg-blue;
+  color: $base-color-text-black;
+  font-family: $primary-font;
+  font-size: 10px;
+}
+

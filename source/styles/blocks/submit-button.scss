@@ -1,12 +1,14 @@
 .submit-button {
-  font-family: $primary-font;
+  font-family: $second-font;
   font-size: 12px;
-  font-weight: 800px;
+  line-height: 30px;
   background-color: $bg-dark-blue;
   padding: 5px;
   border: 1px solid;
   border-radius: 2px;
+  color: $base-color-text-black;
 }
 
 .checkbox__custom {
-width: 15px;}
+width: 12px;
+}
