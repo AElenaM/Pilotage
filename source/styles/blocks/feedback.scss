@@ -11,6 +11,11 @@
 
 .feedback__title {
   font-family: $second-font;
+  font-size: 14px;
+  font-weight: 800px;
+}
+
+.feedback__title__lowercase {
   font-size: 12px;
-  font-weight: 400px;
+  line-height: 14px;
 }
