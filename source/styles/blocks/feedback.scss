@@ -1,7 +1,6 @@
 .feedback {
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
   background-color: $bg-basic-gray;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
   text-align: center;
@@ -13,9 +12,17 @@
   font-family: $second-font;
   font-size: 14px;
   font-weight: 800px;
+  width: auto
 }
 
 .feedback__title__lowercase {
   font-size: 12px;
-  line-height: 14px;
+  line-height: 14px
 }
+
+// .feedback__container {
+//   display: block;
+//   background-color: $bg-basic-gray;
+//   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+// }
+

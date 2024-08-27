@@ -10,6 +10,10 @@
   color: $base-color-text-black;
 }
 
+.submit-button:hover {
+  border: 2px solid $bg-dark-blue;
+}
+
 .checkbox__custom {
 width: 12px;
 }

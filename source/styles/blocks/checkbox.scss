@@ -6,4 +6,10 @@
   color: $base-color-text-grey;
   text-transform: $text-lowercase;
   text-align: right;
+  margin-left: 25px;
+}
+
+.checkbox__custom {
+  position: absolute;
+  outline: none;
 }
