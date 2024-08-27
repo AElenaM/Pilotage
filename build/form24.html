@@ -1,4 +1,164 @@
-<!DOCTYPE html><html class="page" lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="styles/styles.css"><link rel="icon" href="favicon.ico"><link rel="icon" href="favicons/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="favicons/apple.png"><link rel="manifest" href="manifest.webmanifest"><title>"Высший пилотаж"</title></head><body class="page__body"><header class="page-header"><div class="page-header__wrapper"><div class="page-header__container"><nav class="main-nav"><button class="main-nav__toggle main-nav__toggle-off" type="button"><svg class="main-nav__cross-icon" width="22" height="22"><use xlink:href="#icon-cross"></use></svg> <span class="visually-hidden">Закрыть меню</span></button><ul class="maim-nav__list site-list default-list"><li class="site-list__item site-list__item--active"><a href="index.html">Главная</a></li><li class="site-list__item"><a href="info.html">Информация</a></li></ul></nav></div><div class="page-header__button"><button class="main-nav__toggle main-nav__toggle-on" type="button"><svg class="main-nav__menu-icon" width="23" height="22"><use xlink:href="#icon-menu"></use></svg> <span class="visually-hidden">Открыть меню</span></button></div><div class="page-header__hero page-header__hero--home"><h2 class="visually-hidden">Высший пилотаж</h2><img src="#" alt="Главное изображение Высший пилотаж" width="281" height="214"></div></div></header><main class="page-main"><h1 class="visually-hidden">КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+</h1><section class="page-main__excursion excursion"><div class="excursion-wrapper"><div class="excursion-header"><img class="excursion-header-item" src="#" alt="КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+" width="320" height="260"><p class="excursion-header-item--description">Самому популярному парку региона больше 20 лет. На площади в 52 гектара нашли свой дом более 9000 животных - по численности питомцев «Роев ручей» уступает только Московскому зоопарку. Здесь представлены животные из разных частей света - хищники, копытные, пернатые и многие другие. Любимцы гостей парка - белые медведи и пингвины.<br>Во время Экскурсии мы не только увидим обитателей зоопарка, но и узнаём множество интересных фактов об их жизни, например, какие у него любимые блюда, сколько ему лет и когда у него день рождения 🥳<br>Очень часто количество вопросов деток-почемучек превышает багаж знаний ☺️ именно поэтому экскурсия по парку никогда не сравниться с обычным посещением. Это открытый и увлекательный урок в мир животных.<br>Роев Ручей гордость Красноярска и любимое место детей. Гордость за нашу сибирскую красоту, флору и фауну, за то, что у нас есть такой замечательный уголок природы.</p><p class="excursion-header-item--price">Стоимость для групп от 25 человек: 1500 руб/чел. Иногородние группы (Железногорск, Сосновоборск) +300 руб/чел.</p><p class="excursion-header-item--info">В стоимость включено: автобус от школы/детского сада, экскурсионная программа, входные билеты, фотограф (фото в электронном виде), именные грамоты, видеоролик.</p></div></div></section><section class="page-main_slides"><div class="sliders-images"><img src="#" alt="КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+ фото1"> <img src="#" alt="КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+ фото2"> <img src="#" alt="КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+ фото3"> <img src="#" alt="КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+ фото4"> <img src="#" alt="КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+ фото5"></div><div class="sliders-buttons"><button class="button--click-previous">onclick="previous()">Назад</button> <button>onclick="next()">Вперёд</button></div></section><section class="popup"><button onclick="openPopup()">Открыть всплывающее окно</button><div class="popup__info"><button onclick="closePopup()">Закрыть</button><h3 class="popup__title">Оставить заявку на экскурсию</h3><div class="feedback-container"><div class="form-field"><label for="name" class="visually-hidden">Имя:</label> <input type="text" id="name" placeholder="Ваше имя" disabled="disabled"></div><div class="form-field"><label for="email" class="visually-hidden">E-mail:</label> <input type="email" id="email" placeholder="Ваше e-mail" disabled="disabled"></div><div class="form-field"><label for="phone" class="visually-hidden">Ваш телефон:</label> <input type="tel" id="phone" placeholder="Ваш телефон" disabled="disabled"></div><div class="form-field"><label for="comment" class="textarea-label visually-hidden">Комментарий:</label> <textarea id="comment" class="textarea-input" placeholder="Ваш комментарий...">
-              </textarea></div><a href="#" class="submit-button">Жду звонка</a><p class="feedback-container__checkbox checkbox"><input type="checkbox" id="checkbox" class="checkbox-custom"> <label for="checkbox" class="checkbox-label">Отправляя сведения через электронную форму, Вы даёте согласие на обработку данных.</label></p></div></div></section></main><footer class="page-footer"><div class="page-footer__wrapper"><div class="page-footer__social social"><ul class="social__list default-list"><li class="social__item button"><a href="#" class="social__link social__link--instagramhashtag" target="_blank" title="Instagram Hashtag"><span class="social__link-title">#pilotage</span><!-- <svg class="social__link-image social__link-image--instagram" width="15" height="28">
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>"Высший пилотаж"</title>
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <div class="page-header__container">
+          <nav class="main-nav">
+            <button class="main-nav__toggle main-nav__toggle-off" type="button">
+              <svg class="main-nav__cross-icon" width="22" height="22">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+              <span class="visually-hidden">Закрыть меню</span>
+            </button>
+            <ul class="maim-nav__list site-list default-list">
+              <li class="site-list__item site-list__item--active"><a href="index.html">Главная</a></li>
+              <li class="site-list__item"><a href="info.html">Информация</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="page-header__button">
+          <button class="main-nav__toggle main-nav__toggle-on" type="button">
+            <svg class="main-nav__menu-icon" width="23" height="22">
+              <use xlink:href="#icon-menu"></use>
+            </svg>
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <div class="page-header__hero page-header__hero--home">
+          <h2 class="visually-hidden">Высший пилотаж</h2>
+          <img src="#" alt="Главное изображение Высший пилотаж" width="281" height="214">
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+</h1>
+      <section class="page-main__excursion excursion">
+        <div class="excursion-wrapper">
+          <div class="excursion-header">
+            <img class="excursion-header-item" src="#" alt="КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+" width="320" height="260">
+            <p class="excursion-header-item--description">
+              Самому популярному парку региона больше 20 лет. На площади в 52 гектара нашли свой дом более 9000 животных - по численности питомцев «Роев ручей» уступает только Московскому зоопарку.
+              Здесь представлены животные из разных частей света - хищники, копытные, пернатые и многие другие. Любимцы гостей парка - белые медведи и пингвины.
+              <br>
+              Во время Экскурсии мы не только увидим обитателей зоопарка, но и узнаём множество интересных фактов об их жизни, например, какие у него любимые блюда, сколько ему лет и когда у него день рождения 🥳
+              <br>Очень часто количество вопросов деток-почемучек превышает багаж знаний ☺️ именно поэтому экскурсия по парку никогда не сравниться с обычным посещением. Это открытый и увлекательный урок в мир животных.
+              <br>Роев Ручей гордость Красноярска и любимое место детей. Гордость за нашу сибирскую красоту, флору и фауну, за то, что у нас есть такой замечательный уголок природы.
+            </p>
+            <p class="excursion-header-item--price">
+              Стоимость для групп от 25 человек: 1500 руб/чел.
+              Иногородние группы (Железногорск, Сосновоборск) +300 руб/чел.
+            </p>
+            <p class="excursion-header-item--info">
+              В стоимость включено: автобус от школы/детского сада, экскурсионная программа, входные билеты, фотограф (фото в электронном виде), именные грамоты, видеоролик.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="page-main_slides">
+        <div class="sliders-images">
+          <img src="#" alt="КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+ фото1">
+          <img src="#" alt="КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+ фото2">
+          <img src="#" alt="КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+ фото3">
+          <img src="#" alt="КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+ фото4">
+          <img src="#" alt="КРОКОДИЛЫ, ЖИРАФЫ И ГОРИЛЛЫ 6+ фото5">
+        </div>
+        <div class="sliders-buttons">
+          <button class="button--click-previous">
+            onclick="previous()">Назад
+          </button>
+          <button>
+            onclick="next()">Вперёд
+          </button>
+        </div>
+      </section>
+      <section class="popup">
+        <button onclick="openPopup()">Открыть всплывающее окно</button>
+        <div class="popup__info">
+          <button onclick="closePopup()">Закрыть</button>
+          <h3 class="popup__title">Оставить заявку на экскурсию</h3>
+          <div class="feedback-container">
+            <div class="form-field">
+              <label for="name" class="visually-hidden">Имя:</label>
+              <input type="text" id="name" placeholder="Ваше имя" disabled="disabled">
+            </div>
+            <div class="form-field">
+              <label for="email" class="visually-hidden">E-mail:</label>
+              <input type="email" id="email" placeholder="Ваше e-mail" disabled="disabled">
+            </div>
+            <div class="form-field">
+              <label for="phone" class="visually-hidden">Ваш телефон:</label>
+              <input type="tel" id="phone" placeholder="Ваш телефон" disabled="disabled">
+            </div>
+            <div class="form-field">
+              <label for="comment" class="textarea-label visually-hidden">Комментарий:</label>
+              <textarea id="comment" class="textarea-input" placeholder="Ваш комментарий...">
+              </textarea>
+            </div>
+            <a href="#" class="submit-button">Жду звонка</a>
+            <p class="feedback-container__checkbox checkbox">
+              <input type="checkbox" id="checkbox" class="checkbox-custom">
+              <label for="checkbox" class="checkbox-label">Отправляя сведения через электронную форму, Вы даёте согласие на обработку данных.</label>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__social social">
+          <ul class="social__list default-list">
+            <li class="social__item button">
+              <a href="#" class="social__link social__link--instagramhashtag" target="_blank" title="Instagram Hashtag">
+                <span class="social__link-title">#pilotage</span>
+                <!-- <svg class="social__link-image social__link-image--instagram" width="15" height="28">
                   <use xlink:href="#icon-instagram"></use>
-                </svg> --></a></li><li class="social__item button"><a href="https://vk.com/dosug.deti" class="social__link social__link--vk" target="_blank" title="VKontakte"><span class="visually-hidden">VKontakte</span> <svg class="social__link-image social__link-image--VK" width="16" height="16"><use xlink:href="#icon-VK"></use></svg></a></li><li class="social__item button"><a href="https://www.instagram.com/krasdosug?igsh=MmFobG1mZmd6eGN2&utm_source=qr" class="social__link social__link--intagram" target="_blank" title="Instagram"><span class="visually-hidden">Instagram</span> <svg class="social__link-image social__link-image--instagram" width="20" height="14"><use xlink:href="#icon-instagram"></use></svg></a></li><li class="social__item button"><a href="tel:+79138387770" class="social__link social__link--tel" +7 (913) 838-77-70><span class="social__link-telnumber">+7 (913) 838-77-70</span></a></li></ul></div><div class="page-footer__copyright copyright"><b class="copyright__text">Разработано</b> <a class="copyright__link" href="https://github.com/AElenaM" target="_blank" title="Elena C."><span class="visually-hidden">Elena C.</span> <svg class="copyright__logo" width="27" height="34"><use xlink:href="#icon-EC"></use></svg></a></div></div></footer></body></html>
+                </svg> -->
+              </a>
+            </li>
+            <li class="social__item button">
+              <a href="https://vk.com/dosug.deti" class="social__link social__link--vk" target="_blank" title="VKontakte">
+                <span class="visually-hidden">VKontakte</span>
+                <svg class="social__link-image social__link-image--VK" width="16" height="16">
+                  <use xlink:href="#icon-VK"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item button">
+              <a href="https://www.instagram.com/krasdosug?igsh=MmFobG1mZmd6eGN2&utm_source=qr" class="social__link social__link--intagram" target="_blank" title="Instagram">
+                <span class="visually-hidden">Instagram</span>
+                <svg class="social__link-image social__link-image--instagram" width="20" height="14">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item button">
+              <a href="tel:+79138387770" class="social__link social__link--tel" +7 (913) 838-77-70>
+                <span class="social__link-telnumber">+7 (913) 838-77-70</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://github.com/AElenaM" target="_blank" title="Elena C.">
+            <span class="visually-hidden">Elena C.</span>
+            <svg class="copyright__logo" width="27" height="34">
+              <use xlink:href="#icon-EC"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

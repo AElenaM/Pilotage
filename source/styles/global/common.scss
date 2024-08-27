@@ -80,10 +80,29 @@ button:hover {
 }
 
 input {
-  outline: none;
   font-family: $primary-font;
-  font-size: 10px;
+  outline: none;
+  padding: 2px;
+  border-radius: 5px;
+  border: 2px solid $bg-basic-gray;
+  box-shadow:  inset 0 0 5px rgba(60, 167, 202, 0.5);
+  width: auto;
+  height: auto;
+}
+
+input::placeholder {
+  font-weight: 800px;
+  font-family: $second-font;
+  text-align: start;
+  font-size: 14px;
   padding: 2px;
   color: $base-color-text-grey;
-  width: 50%;
+  width: auto;
+}
+
+textarea {
+  font-family: $primary-font;
+  font-size: 14px;
+  padding: 2px;
+  width: auto;
 }

@@ -1,1 +1,48 @@
-var n=document.querySelector(".sliders-images"),s=document.querySelectorAll(".sliders-images__item"),u=document.getElementById("prev"),m=document.getElementById("next"),t=0,l=0,i=0,d=!1;function r(e){let c=s[e].clientWidth;n.style.transform=`translateX(${-e*c}px)`}function o(){t=(t+1)%s.length,r(t)}function a(){t=(t-1+s.length)%s.length,r(t)}m.addEventListener("click",o);u.addEventListener("click",a);n.addEventListener("touchstart",e=>{l=e.touches[0].clientX,d=!0});n.addEventListener("touchmove",e=>{if(!d)return;i=e.touches[0].clientX;let c=i-l;n.style.transform=`translateX(${-t*s[0].clientWidth+c}px)`});n.addEventListener("touchend",()=>{d=!1;let e=i-l;e>50?a():e<-50?o():r(t),l=0,i=0});
+// source/scripts/index.js
+var slides = document.querySelector(".sliders-images");
+var images = document.querySelectorAll(".sliders-images__item");
+var prevBtn = document.getElementById("prev");
+var nextBtn = document.getElementById("next");
+var index = 0;
+var startX = 0;
+var currentX = 0;
+var isDragging = false;
+function showSlide(index2) {
+  const slideWidth = images[index2].clientWidth;
+  slides.style.transform = `translateX(${-index2 * slideWidth}px)`;
+}
+function nextSlide() {
+  index = (index + 1) % images.length;
+  showSlide(index);
+}
+function prevSlide() {
+  index = (index - 1 + images.length) % images.length;
+  showSlide(index);
+}
+nextBtn.addEventListener(`click`, nextSlide);
+prevBtn.addEventListener(`click`, prevSlide);
+slides.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+  isDragging = true;
+});
+slides.addEventListener("touchmove", (e) => {
+  if (!isDragging)
+    return;
+  currentX = e.touches[0].clientX;
+  const deltaX = currentX - startX;
+  slides.style.transform = `translateX(${-index * images[0].clientWidth + deltaX}px)`;
+});
+slides.addEventListener("touchend", () => {
+  isDragging = false;
+  const deltaX = currentX - startX;
+  if (deltaX > 50) {
+    prevSlide();
+  } else if (deltaX < -50) {
+    nextSlide();
+  } else {
+    showSlide(index);
+  }
+  startX = 0;
+  currentX = 0;
+});
+//# sourceMappingURL=index.js.map
