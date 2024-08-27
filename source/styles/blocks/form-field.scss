@@ -1,4 +1,6 @@
 .form-field {
+  width: 100%;
+  font-family: $primary-font;
   display: block;
   position: relative;
   box-sizing: border-box;
@@ -28,3 +30,6 @@ textarea::placeholder {
   font-size: 10px;
 }
 
+.submit-button {
+  cursor: pointer;
+}

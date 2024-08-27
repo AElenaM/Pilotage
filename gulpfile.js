@@ -210,3 +210,34 @@ export function runDev (done) {
     startServer,
   )(done);
 }
+
+// php
+
+// const gulp = require('gulp');
+// const connectPHP = require('gulp-connect-php');
+// const browserSync = require('browser-sync').create();
+
+// // Задача для запуска PHP сервера
+// gulp.task('php', function() {
+//     connectPHP.server({
+//         base: 'src', // Папка с вашим PHP-кодом
+//         port: 8000, // Порт, на котором будет работать сервер
+//         keepalive: true
+//     }, function (){
+//         browserSync.init({
+//             proxy: '127.0.0.1:8000', // Прокси на локальный сервер PHP
+//             baseDir: './src',
+//             open: true,
+//             notify: false
+//         });
+//     });
+
+//     // Следим за изменениями в файлах PHP и перезагружаем браузер
+//     gulp.watch('src/**/*.php').on('change', function () {
+//         browserSync.reload();
+//     });
+// });
+
+// // Задача по умолчанию
+// gulp.task('default', gulp.series('php'));
+// //

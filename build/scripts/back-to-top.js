@@ -1,0 +1,1 @@
+window.addEventListener("scroll",function(){let o=window.scrollY,t=document.querySelector(".back-to-top");o>300?t.classList.add("show"):t.classList.remove("show")});document.querySelector(".back-to-top").addEventListener("click",function(o){o.preventDefault(),window.scrollTo({top:0,behavior:"smooth"})});
