@@ -11,17 +11,19 @@
 }
 
 .site-list__item {
-  // border: 2px solid rgb(135, 188, 221);
-  // border-radius: 4px;
   padding: 8px;
   padding-bottom: 2px;
-  // background-color: $bg-blue;
   list-style-type: none;
 }
 
 .site-list__item--active {
-  // text-decoration: underline;
-  border-bottom: 2px solid $bg-blue;
+  border-bottom: 2px solid $bg-dark-blue;
   border-radius: 2px;
   font-weight: 800px;
+  width: 100%;
+}
+
+.site-list__item--active:hover {
+  border-bottom: 2px solid $bg-blue;
+  border-radius: 2px;
 }
