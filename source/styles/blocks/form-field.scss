@@ -4,7 +4,7 @@
   display: block;
   position: relative;
   box-sizing: border-box;
-  padding: 5px 0 5px 5px;
+  padding: 5px;
   text-transform: none;
   border: none;
 }
@@ -19,12 +19,12 @@ textarea {
 }
 
 textarea::placeholder {
-  color: #b71010;
+  color: $base-color-text-grey;
   opacity: 1;
 }
 
 .textarea-input {
-  background-color: $bg-blue;
+  // background-color: $bg-blue;
   color: $base-color-text-black;
   font-family: $primary-font;
   font-size: 10px;

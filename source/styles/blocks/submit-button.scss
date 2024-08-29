@@ -1,19 +1,17 @@
 .submit-button {
   font-family: $second-font;
   text-transform: $text-uppercase;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 14px;
   line-height: 30px;
-  background-color: $bg-blue;
+  background-color: $base-color-text-white;
   padding: 5px;
-  border: 2px solid $bg-basic-gray;
+  border: 0.5px solid $bg-basic-gray;
   border-radius: 5px;
-  color: $base-color-text-black;
+  color: $base-color-text-grey;
 }
 
 .submit-button:hover {
-  border: 2px solid $bg-dark-blue;
+  border: 0.5px solid $bg-dark-blue;
 }
 
-.checkbox__custom {
-width: 12px;
-}

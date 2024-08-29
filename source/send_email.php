@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "cieslikelena@gmail.com"; // Замените на ваш email
     $subject = "Новая заявка на обратную связь от $name";
     $headers = "From: $name" . "\r\n" .
-              //  "Reply-To: $email" . "\r\n" .
                "X-Mailer: PHP/" . phpversion();
 
     // Формирование сообщения

@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   background-color: $bg-basic-gray;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 10px;
   margin: 20px;
 }
 
@@ -12,17 +11,17 @@
   font-family: $second-font;
   font-size: 14px;
   font-weight: 800px;
-  width: auto
+  text-align: center;
 }
 
 .feedback__title__lowercase {
   font-size: 12px;
-  line-height: 14px
+  line-height: 14px;
+  text-transform: initial;
+  font-weight: 100;
 }
 
-// .feedback__container {
-//   display: block;
-//   background-color: $bg-basic-gray;
-//   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-// }
+.feedback__container {
+  padding: 0 20px;
+}
 

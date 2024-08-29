@@ -81,19 +81,20 @@ button:hover {
 }
 
 input {
-  font-family: $primary-font;
+  font-family: $second-font;
+  font-size: 16px;
   outline: none;
-  padding: 2px;
   border-radius: 5px;
-  border: 2px solid $bg-basic-gray;
-  box-shadow:  inset 0 0 5px rgba(60, 167, 202, 0.5);
-  width: 80%;
+  border: 0.5px solid $bg-blue;
+  width: 100%;
   height: auto;
+  padding: 4px;
 }
+
 textarea:hover,
 input:hover {
-  box-shadow:  inset 0 0 5px rgba(60, 167, 202, 0.9);
-  border: 2px solid $bg-blue;
+  // box-shadow:  inset 0 0 5px rgba(60, 167, 202, 0.9);
+  border: 0.5px solid $bg-dark-blue;
 }
 
 input::placeholder {
@@ -101,19 +102,43 @@ input::placeholder {
   font-family: $second-font;
   text-align: start;
   font-size: 14px;
-  padding: 2px;
+  padding: 4px;
   color: $base-color-text-grey;
 }
 
 .textarea__input {
   font-family: $second-font;
   font-size: 14px;
-  padding: 2px;
-  width: 80%;
+  width: 100%;
   outline: none;
+  padding: 4px;
+  border-radius: 5px;
+  border: 0.5px solid $bg-basic-gray;
+}
+
+.floating-button {
+  font-family: $second-font;
+  position: fixed;
+  top: 30px;
+  left: 35px;
+  border: 0.5px solid $base-color-text-black;
+  color: $base-color-text-black;
+  font-weight: 400px;
   padding: 2px;
   border-radius: 5px;
-  border: 2px solid $bg-basic-gray;
-  box-shadow:  inset 0 0 5px rgba(60, 167, 202, 0.5);
-
+  text-align: center;
+  text-decoration: none;
+  line-height: 12px;
+  font-weight: 500px;
+  font-size: 14px;
+  box-shadow: 0 4 10 rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 90px;
+  text-transform: initial;
 }
+
+.floating-button:hover {
+  background-color: $bg-basic-gray;
+   color: $bg-dark-blue;
+}
+

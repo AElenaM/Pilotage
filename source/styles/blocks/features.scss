@@ -24,10 +24,23 @@
 
 .features__foreword-item {
   background-color: $bg-basic-gray;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  // border: 2px solid rgb(135, 188, 221);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   text-align: center;
-  // max-width: fit-content;
+  padding: 10px;
   margin-bottom: 10px;
+}
+
+.features__foreword-item {
+  color: $base-color-text-grey;
+}
+
+.features__foreword-info {
+  font-family: $primary-font;
+  text-transform: $text-uppercase;
+  font-size: 12px;
+  line-height: 18px;
+  color: $base-color-text-grey;
+  text-align: justify;
+  padding: 5px;
 }
