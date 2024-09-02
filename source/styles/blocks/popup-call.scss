@@ -176,11 +176,11 @@
 
 .close-button-class {
   position: absolute;
-  top: -20px;
-  right: 5px;
+  top: -23px;
+  right: 2px;
   cursor: pointer;
-  font-size: 20px;
-  color: $bg-blue;
+  font-size: 50px;
+  color: $bg-dark-blue;
 }
 
 .close-button-class:hover {
@@ -211,6 +211,7 @@
 .callback-form button:hover {
   border: 0.5px solid $bg-dark-blue;
   color:$base-color-text-black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .popup-content__info {
@@ -247,8 +248,9 @@
   color: white;
   border: none;
   cursor: pointer;
+  font-size: 50px;
 }
 
 .success-message button:hover {
-  background-color:$bg-dark-blue;
+  background-color:$base-color-text-black;
 }
