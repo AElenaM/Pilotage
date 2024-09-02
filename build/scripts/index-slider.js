@@ -1,48 +1,48 @@
 // source/scripts/index-slider.js
-var slides = document.querySelector(".sliders-images");
-var images = document.querySelectorAll(".sliders-images__item");
-var prevBtn = document.getElementById("prev");
-var nextBtn = document.getElementById("next");
-var index = 0;
-var startX = 0;
-var currentX = 0;
-var isDragging = false;
-function showSlide(index2) {
-  const slideWidth = images[index2].clientWidth;
-  slides.style.transform = `translateX(${-index2 * slideWidth}px)`;
+var carousel = document.getElementById("carousel");
+var indicatorsContainer = document.getElementById("indicatorContainer");
+var items = document.querySelectorAll(".carousel-item");
+var currentIndex = 0;
+function updateIndicators() {
+  indicatorsContainer.innerHTML = "";
+  items.forEach((_, index) => {
+    const indicator = document.createElement("div");
+    indicator.className = "indicator";
+    if (index === currentIndex) {
+      indicator.classList.add("active");
+    }
+    indicator.addEventListener("click", () => {
+      goToSlide(index);
+    });
+    indicatorsContainer.appendChild(indicator);
+  });
 }
-function nextSlide() {
-  index = (index + 1) % images.length;
-  showSlide(index);
+function goToSlide(index) {
+  currentIndex = (index + items.length) % items.length;
+  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  updateIndicators();
 }
 function prevSlide() {
-  index = (index - 1 + images.length) % images.length;
-  showSlide(index);
+  goToSlide(currentIndex - 1);
 }
-nextBtn.addEventListener(`click`, nextSlide);
-prevBtn.addEventListener(`click`, prevSlide);
-slides.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-  isDragging = true;
+function nextSlide() {
+  goToSlide(currentIndex + 1);
+}
+document.getElementById("prevBtn").addEventListener("click", prevSlide);
+document.getElementById("nextBtn").addEventListener("click", nextSlide);
+updateIndicators();
+goToSlide(0);
+var startX = 0;
+var endX = 0;
+carousel.addEventListener("touchstart", (event) => {
+  startX = event.touches[0].clientX;
 });
-slides.addEventListener("touchmove", (e) => {
-  if (!isDragging)
-    return;
-  currentX = e.touches[0].clientX;
-  const deltaX = currentX - startX;
-  slides.style.transform = `translateX(${-index * images[0].clientWidth + deltaX}px)`;
-});
-slides.addEventListener("touchend", () => {
-  isDragging = false;
-  const deltaX = currentX - startX;
-  if (deltaX > 50) {
-    prevSlide();
-  } else if (deltaX < -50) {
+carousel.addEventListener("touchend", (event) => {
+  endX = event.changedTouches[0].clientX;
+  if (startX - endX > 50) {
     nextSlide();
-  } else {
-    showSlide(index);
+  } else if (endX - startX > 50) {
+    prevSlide();
   }
-  startX = 0;
-  currentX = 0;
 });
 //# sourceMappingURL=index-slider.js.map

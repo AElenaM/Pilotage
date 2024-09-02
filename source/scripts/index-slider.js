@@ -1,61 +1,59 @@
-const slides = document.querySelector('.sliders-images');
-const images = document.querySelectorAll('.sliders-images__item');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
 
-  let index = 0;
-  let startX = 0;
-  let currentX = 0;
-  let isDragging = false;
+  const carousel = document.getElementById('carousel');
+  const indicatorsContainer = document.getElementById('indicatorContainer');
+  const items = document.querySelectorAll('.carousel-item');
+  let currentIndex = 0;
 
-  function showSlide(index) {
-    const slideWidth = images[index].clientWidth;
-    slides.style.transform = `translateX(${-index * slideWidth}px)`;
+  function updateIndicators() {
+      indicatorsContainer.innerHTML = '';
+      items.forEach((_, index) => {
+          const indicator = document.createElement('div');
+          indicator.className = 'indicator';
+          if (index === currentIndex) {
+              indicator.classList.add('active');
+          }
+          indicator.addEventListener('click', () => {
+              goToSlide(index);
+          });
+          indicatorsContainer.appendChild(indicator);
+      });
   }
 
-  function nextSlide() {
-    index = (index + 1) %
-    images.length;
-    showSlide(index);
+  function goToSlide(index) {
+      currentIndex = (index + items.length) % items.length;
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+      updateIndicators();
   }
 
   function prevSlide() {
-    index = (index - 1 + images.length) % images.length;
-    showSlide(index);
+      goToSlide(currentIndex - 1);
   }
 
-  nextBtn.addEventListener(`click`, nextSlide);
+  function nextSlide() {
+      goToSlide(currentIndex + 1);
+  }
 
-  prevBtn.addEventListener(`click`, prevSlide);
+  document.getElementById('prevBtn').addEventListener('click', prevSlide);
+  document.getElementById('nextBtn').addEventListener('click', nextSlide);
 
-   // Обработка начала касания
-   slides.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    isDragging = true;
-});
+  // Initialize
+  updateIndicators();
+  goToSlide(0);
 
-// Обработка движения пальца
-slides.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    currentX = e.touches[0].clientX;
-    const deltaX = currentX - startX;
-    slides.style.transform = `translateX(${(-index * images[0].clientWidth) + deltaX}px)`;
-});
+  // Add touch support
+  let startX = 0;
+  let endX = 0;
 
-// Обработка окончания касания
-slides.addEventListener('touchend', () => {
-    isDragging = false;
-    const deltaX = currentX - startX;
-
-    // Если сдвиг больше 50px, переключаем слайд
-    if (deltaX > 50) {
-        prevSlide();
-    } else if (deltaX < -50) {
-        nextSlide();
-    } else {
-        showSlide(index);
-    }
-  // Сброс переменных
-  startX = 0;
-  currentX = 0;
+  carousel.addEventListener('touchstart', (event) => {
+      startX = event.touches[0].clientX;
   });
+
+  carousel.addEventListener('touchend', (event) => {
+      endX = event.changedTouches[0].clientX;
+      if (startX - endX > 50) {
+          nextSlide();
+      } else if (endX - startX > 50) {
+          prevSlide();
+      }
+  });
+

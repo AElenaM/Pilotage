@@ -1,17 +1,19 @@
 .page-main__advantages {
   font-family: $primary-font;
-  font-size: 12px;
+  font-size: 14px;
   width: 300px;
   height: auto;
   text-align: justify;
-  margin: 15px;
+  margin: auto;
   font-weight: 300;
+  text-transform: initial;
 }
 
 .page-main-info--bold {
   text-align: justify;
   width: 300px;
-  margin: 15px;
+  padding-top: 10px;
+  margin: auto;
   font-weight: bold;
   color: $bg-salomon;
 }

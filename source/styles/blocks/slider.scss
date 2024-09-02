@@ -1,54 +1,111 @@
-.page-main__slides {
+.carousel-container {
   position: relative;
-  max-width: 600px;
-  width: 100%;
-  overflow: hidden;
-  border: 10px solid #ffffff;
-  border-radius: 2px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.sliders-images {
   display: flex;
-  transition: transform 0.5s
-  ease-in-out;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  margin: 10px 0;
 }
 
-.sliders-images__item {
-  min-width: 100%;
+// @media (min-width: $desktop-min-width) {
+//   .carousel-container {
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     max-width: 100%;
+//     height: 100%;
+//     margin: 10px 0;
+//   }
+
+//   .carousel-item picture img,
+//   .carousel-item picture source {
+//     width: 100%;
+//     display: block;
+//     object-fit: contain;
+//     height: 100%;
+// }
+// }
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
   box-sizing: border-box;
-}
-
-.sliders-images__item source,
-.sliders-images__item img {
-  width: 100%;
-  height: 100%;
   object-fit: contain;
 }
 
-.button--click-previous,
-.button--click-next {
+.carousel-item picture img,
+.carousel-item picture source {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.nav-button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: $base-color-text-white;
   border: none;
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
+  user-select: none;
+  transform: translateY(-50%);
 }
 
-.button--click-previous {
+.prev {
   left: 10px;
 }
 
-.button--click-next {
+.next {
   right: 10px;
 }
 
-.button--click-previous:hover,
-.button--click-next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.indicator-container {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
+.indicator {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: white;
+}
+/* Set up circular effect with additional slides */
+#slide1:checked ~ .slider-wrapper {
+  transform: translateX(0%);
+}
+#slide2:checked ~ .slider-wrapper {
+  transform: translateX(-100%);
+}
+#slide3:checked ~ .slider-wrapper {
+  transform: translateX(-200%);
+}
+#slide4:checked ~ .slider-wrapper {
+  transform: translateX(-300%);
+}
+#slide5:checked ~ .slider-wrapper {
+  transform: translateX(-400%);
+}
+
+.slider-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  width: calc(100% * 5); /* Number of slides */
+  transition: transform 0.5s ease;
+}
