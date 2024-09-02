@@ -74,47 +74,52 @@
                 </li>
               </ul>
             </div>
-            <!-- <div class="features__program">
-              <p class="features__program-about">Стоимость указана на группу от 25 деток и актуальна на дату рассылки.
-                В стоимость входит: автобус, входные билеты, фотограф, экскурсовод, именные грамоты, видеоролик.
-              </p>
-            </div> -->
           </div>
         </section>
-        <section class="feedback">
-          <div class="feedback__container">
-            <h3 class="feedback__title">заявка
-              <p class="feedback__title__lowercase">Для группового посещения от 25 человек.
-              <br>Если вы планируете посещение в индивидуальном порядке,
+        <section class="popup-call">
+          <div id="overlay" class="overlay"></div>
+          <div id="callbackPopup" class="popup-class">
+            <div class="popup-content">
+              <span id="closeCallbackPopup" class="close-button-class">&times;</span>
+              <h2 class="popup-conten__info">Обратный звонок</h2>
+              <span class="callback-form__info"> Всегда готовы ответить на Ваши вопросы в телефонном режиме</span><br>
+              <form class="callback-form" id="callbackForm" action="send_callback.php" method="POST">
+                  <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                  <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+                  <button type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
+          <div id="successMessage" class="success-message">
+            <p>Ваш запрос успешно отправлен!</p>
+            <button id="closeSuccessMessage">Ок</button>
+          </div>
+          <!-- Кнопка для открытия попапа вручную -->
+          <svg id="openPopupButton" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#00cde2;}.cls-2{fill:#00a4b5;}</style></defs><title>Phone</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16A11.88,11.88,0,0,1,52.12,64H52a51.91,51.91,0,0,1-11.64-1.31A52,52,0,0,1,0,12,12.06,12.06,0,0,1,10.74.07,10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28l5.2,15.62a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76-2.65,2.65a4,4,0,0,0-.89,4.32A38.09,38.09,0,0,0,35.45,49.12a4,4,0,0,0,4.32-.89l2.65-2.65,2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/><path class="cls-2" d="M21.63,16.9a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76L10.74.07A10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28Z"/><path class="cls-2" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16L42.42,45.58l2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/></g></g></svg>
+        </section>
+        <section class="feedback" id="application-form">
+          <div class="contact-form-container">
+            <h3 class="feedback__title">Заявка
+              <p class="feedback__title__lowercase">для группового посещения от 25 человек. Если вы планируете посещение в индивидуальном порядке,
               позвоните нам по телефону 89138387770</p>
             </h3>
-            <form id="contact-form" action="send_email.php" method="post">
-                <div class="form-field">
-                  <label for="name" class="visually-hidden">Имя:</label>
-                  <input type="text" id="name" name="name" placeholder="Ваше имя" required>
-                </div>
-                <div class="form-field">
-                  <label for="phone" class="visually-hidden">Ваш телефон:</label>
-                  <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
-                </div>
-                <div class="form-field">
-                  <label class="textarea-label visually-hidden" for="message">"Ваш комментарий:"</label>
-                  <textarea id="message" name="message" class="textarea__input" name="message" aria-placeholder="fhf" placeholder="Ваш комментарий" required>
-                  </textarea>
-                </div>
-                <button type="submit" class="submit-button">Жду звонка</button>
-                <p class="feedback-container__checkbox checkbox">
-                  <input type="checkbox" id="checkbox" class="checkbox__custom">
-                  <label for="checkbox" class="checkbox__label">Отправляя сведения через электронную форму, Вы даёте согласие на обработку данных.</label>
-                </p>
-              </form></div>
-            
+            <form class="contact-form" action="" method="POST">
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+                <textarea id="comment" name="comment" placeholder="Ваш комментарий" rows="4"></textarea>
+                <button type="submit">Отправить звявку</button>
+            </form>
+
+            <?php if ($message_sent): ?>
+                <div class="success-message">Ваш запрос успешно отправлен!</div>
+            <?php elseif (!empty($error_message)): ?>
+                <div class="error-message"><?php echo $error_message; ?></div>
+            <?php endif; ?>
+          </div>
         </section>
-        <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScwxG4Tqov_Rl6UHTgjXY-o3_SIN_ze1ZXC4_fMFVtZDCS3YA/viewform?embedded=true" width="650" height="500" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSesmW-vcMJnDMC5fsDOQiC02m2VJlCSgkE9zRhEyFxCDdxiiQ/viewform?embedded=true" width="640" height="1049" frameborder="0" marginheight="0" marginwidth="0" class="form-field" >Wird geladen…</iframe> -->
         <section class="scroll">
           <a href="#" class="back-to-top">
             <svg width="24" higth="42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 24a12 12 0 1 0-12-12 12.01 12.01 0 0 0 12 12Zm0-22a10 10 0 1 1-10 10 10.01 10.01 0 0 1 10-10Z"/><path d="M12 8a3 3 0 0 1 1.99.75l.84.78 2.87 2.82a1 1 0 1 1-1.4 1.43l-2.88-2.83c-.19-.19-.47-.44-.76-.7a1 1 0 0 0-1.32 0c-.3.26-.57.51-.75.7l-2.89 2.83a1 1 0 0 1-1.4-1.43l2.88-2.83c.2-.2.5-.48.83-.77a2.99 2.99 0 0 1 1.99-.75Z"/></svg>
-            <!-- <svg width="115" higth="15" viewBox="0 0 49 60" xmlns="http://www.w3.org/2000/svg"><path d="M19 55a5 5 0 0 0 10 0v-30.02l10.3 11.38a5.01 5.01 0 0 0 8.7-3.36c.01-6.56.02-6.1-.07-6.35a4.94 4.94 0 0 0-1.22-4.02c-20.7-22.63-19.23-22.09-21.83-22.55a4.99 4.99 0 0 0-4.5 1.47c-.1.1.62-.7-19.09 21.09a4.96 4.96 0 0 0-1.27 3.23c-.03.28-.02-1.07-.02 7.13a5.01 5.01 0 0 0 8.7 3.36c.1-.09-.14.16 10.3-11.38zm5 3a3 3 0 0 1-3-3v-3.03a4.9 4.9 0 0 0 6 0v3.03a3 3 0 0 1-3 3zm15-24.95-10-11.05v-4.03l10 11.05zm2 2.16v-4.65a5 5 0 0 0 5-.6v3.04a3 3 0 0 1-5 2.21zm-38.23-11.23c23.55-26.03 17.5-19.35 19.02-21.01.7-.75 1.73-1.1 2.73-.92 1.99.35 1.3.92 20.7 21.93a3 3 0 0 1-4.45 4.03l-12.03-13.3a1 1 0 0 0-1.74.67v32.62a3 3 0 0 1-6 0v-32.63a1 1 0 0 0-1.75-.66l-12.03 13.3a3.09 3.09 0 0 1-4.24.2 3 3 0 0 1-.2-4.23zm-.77 9.01v-3.02a4.92 4.92 0 0 0 5 .6v4.64a3 3 0 0 1-5-2.22zm7 .06v-4.03l10-11.05v4.03z"/></svg> -->
           </a>
         </section>
       </main>
@@ -160,11 +165,11 @@
                   </picture>
                 </a>
               </li>
-              <li class="copyright__item">
-                <a class="copyright__link" href="https://github.com/AElenaM" target="_blank" title="Elena C.">Разработано
+              <!-- <li class="copyright__item">
+                <a class="copyright__link" href="https://github.com/AElenaM" target="_blank" title="Elena C.">E.C.
                 <span class="visually-hidden">Elena C.</span>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -173,5 +178,7 @@
     <script src="scripts/back-to-top.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/share.js"></script>
+    <script src="scripts/popup_call.js"></script>
+    <script src="scripts/send__email.js"></script>
   </body>
 </html>

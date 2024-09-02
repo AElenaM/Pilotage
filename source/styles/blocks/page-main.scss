@@ -1,3 +1,7 @@
+.page-main {
+  width: 100%;
+}
+
 .page-main__about {
   font-family: $second-font;
   font-size: 10px;
@@ -13,4 +17,12 @@
   background: $bg-linear-gradient;
   margin: 20px;
   border-radius: 5px;
+}
+
+.page-main__about--info {
+  color: red;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: normal;
+  text-transform: initial;
 }

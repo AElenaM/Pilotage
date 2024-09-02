@@ -1,4 +1,3 @@
-<!-- <?php -->
 // if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //     // Получение данных из формы
 //     $name = htmlspecialchars($_POST['name']);
