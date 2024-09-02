@@ -1,30 +1,24 @@
 // source/scripts/popup_call.js
-var popup = document.getElementById("popup");
-var closePopup = document.getElementsByClassName("close")[0];
-var openPopupButton = document.getElementById("openPopupButton");
-function openPopup() {
-  popup.style.display = "flex";
+function openCallbackPopup() {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("callbackPopup").style.display = "block";
 }
-window.onload = function() {
-  setTimeout(function() {
-    openPopup();
-  }, 1e4);
-};
-openPopupButton.onclick = function() {
-  openPopup();
-};
-closePopup.onclick = function() {
-  popup.style.display = "none";
-};
-window.onclick = function(event) {
-  if (event.target === popup) {
-    popup.style.display = "none";
+function closeCallbackPopup() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("callbackPopup").style.display = "none";
+}
+function closeSuccessMessage() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("successMessage").style.display = "none";
+}
+document.getElementById("closeCallbackPopup").addEventListener("click", closeCallbackPopup);
+document.getElementById("closeSuccessMessage").addEventListener("click", closeSuccessMessage);
+document.getElementById("openPopupButton").addEventListener("click", openCallbackPopup);
+document.getElementById("overlay").addEventListener("click", function(event) {
+  if (event.target === document.getElementById("overlay")) {
+    closeCallbackPopup();
+    closeSuccessMessage();
   }
-};
-document.getElementById("callbackForm").onsubmit = function(event) {
-  event.preventDefault();
-  const phoneNumber = document.getElementById("phoneNumber").value;
-  alert(`\u0421\u043F\u0430\u0441\u0438\u0431\u043E! \u041C\u044B \u0441\u0432\u044F\u0436\u0435\u043C\u0441\u044F \u0441 \u0432\u0430\u043C\u0438 \u043F\u043E \u043D\u043E\u043C\u0435\u0440\u0443 ${phoneNumber}.`);
-  popup.style.display = "none";
-};
+});
+setTimeout(openCallbackPopup, 6e4);
 //# sourceMappingURL=popup_call.js.map

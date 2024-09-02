@@ -1,3 +1,127 @@
+// /* Стили для кнопки */
+// #openPopupButton {
+//   position: fixed;
+//   bottom: 8px;
+//   right: 5px;
+//   padding: 10px 20px;
+//   border: none;
+//   cursor: pointer;
+//   font-size: 16px;
+//   border-radius: 5px;
+//   // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   z-index: 1000;
+//   width: 40px;
+//   height: 40px;
+//   opacity: 0.8;
+// }
+
+// /* Общие стили для попапа */
+// .popup {
+//   display: none; /* Изначально попап скрыт */
+//   position: fixed;
+//   z-index: 1001; /* z-index выше, чтобы попап был над кнопкой */
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.4);
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// /* Содержимое попапа */
+// .popup-content {
+//   font-family: $second-font;
+//   font-size: 16px;
+//   text-transform: initial;
+//   background-color: $base-color-text-white;
+//   padding: 20px;
+//   border-radius: 5px;
+//   width: 300px;
+//   text-align: center;
+// }
+
+// /* Стили для кнопки закрытия */
+// .close {
+//   color: $bg-dark-blue;
+//   float: right;
+//   font-size: 30px;
+//   font-weight: bold;
+// }
+
+// .close:hover,
+// .close:focus {
+//   color: black;
+//   text-decoration: none;
+//   cursor: pointer;
+// }
+
+// /* Стили для формы обратного звонка */
+// #callbackForm {
+//   text-align: left;
+// }
+
+// #callbackForm label {
+//   font-size: 16px;
+// }
+
+// #callbackForm input[type="tel"] {
+//   font-family: $second-font;
+//   font-size: 16px;
+//   width: 100%;
+//   padding: 10px;
+//   margin-top: 10px;
+//   margin-bottom: 20px;
+//   border: 1px solid $bg-dark-blue;
+//   border-radius: 5px;
+//   width: 280px;
+// }
+
+// #callbackForm button {
+//   font-family: $second-font;
+//   font-size: 16px;
+//   text-transform: uppercase;
+//   width: 100%;
+//   padding: 10px;
+//   background-color: $bg-dark-blue;
+//   color: $base-color-text-black;
+//   border: none;
+//   border-radius: 5px;
+//   cursor: pointer;
+// }
+
+// #callbackForm button:hover {
+//   background-color: $bg-dark-blue;
+// }
+
+// .success-message {
+//   display: none; /* Изначально попап скрыт */
+//   position: fixed;
+//   z-index: 1001; /* z-index выше, чтобы попап был над кнопкой */
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.4);
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .success-message p {
+//   font-family: $second-font;
+//   font-size: 16px;
+//   text-transform: initial;
+//   background-color: $base-color-text-white;
+//   padding: 20px;
+//   border-radius: 5px;
+//   width: 300px;
+//   text-align: center;
+//   margin: auto;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 50%;
+// }
+
 /* Стили для кнопки */
 #openPopupButton {
   position: fixed;
@@ -15,82 +139,116 @@
   opacity: 0.8;
 }
 
-/* Общие стили для попапа */
-.popup {
-  display: none; /* Изначально попап скрыт */
+/* Стили для затемнения фона */
+.overlay {
+  display: none;
   position: fixed;
-  z-index: 1001; /* z-index выше, чтобы попап был над кнопкой */
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
-/* Содержимое попапа */
+/* Стили для попапа */
+.popup-class {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  width: 300px;
+  text-align: center;
+  border-radius: 5px;
+}
+
 .popup-content {
   font-family: $second-font;
   font-size: 16px;
   text-transform: initial;
-  background-color: $base-color-text-white;
-  padding: 20px;
+  position: relative;
+}
+
+.close-button-class {
+  position: absolute;
+  top: -20px;
+  right: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  color: $bg-blue;
+}
+
+.close-button-class:hover {
+  color:$base-color-text-black;
+}
+
+/* Стили для формы */
+.callback-form input[type="text"], .callback-form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  font-family: $second-font;
+}
+
+.callback-form button {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border: 0.5px solid transparent;
+  cursor: pointer;
   border-radius: 5px;
+  background-color: $bg-dark-blue;
+  font-family: $second-font;
+  font-size: 16px;
+}
+
+.callback-form button:hover {
+  border: 0.5px solid $bg-dark-blue;
+  color:$base-color-text-black;
+}
+
+.popup-content__info {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+/* Стили для сообщения об успешной отправке */
+.success-message {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
   width: 300px;
   text-align: center;
+  border-radius: 5px;
 }
 
-/* Стили для кнопки закрытия */
-.close {
-  color: $bg-dark-blue;
-  float: right;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Стили для формы обратного звонка */
-#callbackForm {
-  text-align: left;
-}
-
-#callbackForm label {
+.success-message p {
+  margin: 0;
   font-size: 16px;
 }
 
-#callbackForm input[type="tel"] {
+.success-message button {
   font-family: $second-font;
-  font-size: 16px;
-  width: 100%;
-  padding: 10px;
   margin-top: 10px;
-  margin-bottom: 20px;
-  border: 1px solid $bg-dark-blue;
-  border-radius: 5px;
-  width: 280px;
-}
-
-#callbackForm button {
-  font-family: $second-font;
-  font-size: 16px;
-  text-transform: uppercase;
-  width: 100%;
   padding: 10px;
-  background-color: $bg-dark-blue;
-  color: $base-color-text-black;
+  background-color:$bg-dark-blue;
+  color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-#callbackForm button:hover {
-  background-color: $bg-dark-blue;
+.success-message button:hover {
+  background-color:$bg-dark-blue;
 }
-

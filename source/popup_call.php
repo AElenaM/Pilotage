@@ -1,23 +1,29 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Получение данных из формы
-    $phoneNumber = htmlspecialchars($_POST['phoneNumber']);
+    $name = htmlspecialchars(trim($_POST["name"]));
+    $phone = htmlspecialchars(trim($_POST["phone"]));
 
-    // Настройки электронной почты
-    $to = "cieslikelena@gmail.com"; // Замените на ваш email
-    $subject = "Заявка на обратный звонок";
-    $headers = "X-Mailer: PHP/" . phpversion();
+    // Валидация данных
+    if (!empty($name) && !empty($phone)) {
+        // Настройка отправки почты
+        $to = "cieslikelena@gmail.com"; // Замените на ваш email
+        $subject = "Запрос на обратный звонок";
+        $message = "Имя: $name\nТелефон: $phone";
+        $headers = "From: $name" . "\r\n" .
+        "X-Mailer: PHP/" . phpversion();
 
-    // Формирование сообщения
-    $emailMessage .= "Ваш телефон: $phoneNumber\n";
-
-    // Отправка сообщения
-    if (mail($to, $subject, $headers)) {
-        echo "Сообщение успешно отправлено!";
+        // Отправка письма
+        if (mail($to, $subject, $message, $headers)) {
+            // Если письмо успешно отправлено, показываем сообщение об успешной отправке
+            echo "<script>window.onload = function() { showSuccessMessage(); }</script>";
+        } else {
+            echo "Произошла ошибка при отправке сообщения.";
+        }
     } else {
-        echo "Ошибка при отправке сообщения.";
+        echo "Пожалуйста, заполните все поля.";
     }
 } else {
-    echo "Некорректный запрос.";
+    echo "Неправильный метод отправки формы.";
 }
 ?>
