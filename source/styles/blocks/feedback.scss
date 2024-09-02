@@ -2,9 +2,12 @@
   display: flex;
   flex-direction: column;
   background-color: $bg-basic-gray;
+  margin: auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin: 20px;
+  font-family: $second-font;
+  font-size: 14px;
+  border-radius: 5px;
 }
 
 .feedback__title {
@@ -12,6 +15,7 @@
   font-size: 14px;
   font-weight: 800px;
   text-align: center;
+  margin: 0;
 }
 
 .feedback__title__lowercase {
@@ -19,9 +23,79 @@
   line-height: 14px;
   text-transform: initial;
   font-weight: 100;
+  padding: 0 20px;
 }
 
-.feedback__container {
-  padding: 0 20px;
+// .feedback__container {
+//   padding: 0 20px;
+// }
+
+/* Стили для формы */
+.contact-form-container {
+  background-color: $base-color-text-white;
+  padding: 20px;
+  // box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: auto;
+}
+
+.contact-form input[type="text"], .contact-form input[type="tel"], .contact-form textarea {
+  font-family: $second-font;
+  font-size: 16px;
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  border: 0.5px solid $bg-blue;
+}
+
+.contact-form textarea:hover {
+  border: 0.5px solid $bg-dark-blue;
+}
+
+.contact-form button {
+  font-family: $second-font;
+  font-size: 16px;
+  width: calc(100% - 22px);  padding: 10px;
+  background-color: $bg-dark-blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contact-form button:hover {
+  color: $base-color-text-black;
+  // background-color: $bg-blue;
+  // border: 1px solid $bg-dark-blue;
+}
+
+/* Стили для сообщения об успешной отправке */
+.success-message {
+  font-family: $second-font;
+  font-size: 16px;
+  display: none;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: $bg-blue;
+  color: $base-color-text-black;
+  border: 0.5px solid $bg-dark-blue;
+  border-radius: 5px;
+}
+
+.error-message {
+  font-family: $second-font;
+  font-size: 16px;
+  display: none;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: $bg-blue;
+  color: $bg-salomon;
+  border: 0.5px solid $bg-dark-blue;
+  border-radius: 5px;
 }
 
