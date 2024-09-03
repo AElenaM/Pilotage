@@ -28,32 +28,52 @@
   border-radius: 2px;
 }
 
-@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+@media (min-width: $desktop-min-width) {
   .maim-nav__list {
     display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 800px;
     justify-content: space-between;
-    list-style-type: none;
-    flex-wrap: nowrap;
-    padding: 0;
-    margin: 0;
-    font-weight: 600;
-    line-height: 14px;
-    font-family: $second-font;
+    margin-bottom: 20px;
+  }
+
+  .site-list__item {
+    padding-right: 60px;
+  }
+
+  .site-list__item--active {
+    border-bottom: 4px solid $bg-dark-blue;
+    border-radius: 4px;
+  }
+
+  .site-list__item--active:hover {
+    border-bottom: 4px solid $bg-blue;
+    border-radius: 4px;
   }
 }
 
-@media (min-width: $desktop-min-width) {
-  body {
-    font-size: 16px;
-    line-height: 24px;
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .maim-nav__list {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 800px;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 
-  .page__body {
-    width: 80%;
-    max-width: desktop-max-width;
+  .site-list__item {
+    padding-right: 60px;
   }
 
-  .container {
-    padding: 40px;
+  .site-list__item--active {
+    border-bottom: 4px solid $bg-dark-blue;
+    border-radius: 4px;
+  }
+
+  .site-list__item--active:hover {
+    border-bottom: 4px solid $bg-blue;
+    border-radius: 4px;
   }
 }

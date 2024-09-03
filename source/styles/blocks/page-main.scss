@@ -27,3 +27,19 @@
   font-weight: normal;
   text-transform: initial;
 }
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    .page-main__about {
+    font-size: 18px;
+    line-height: 20px;
+    color: $bg-salomon;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .page-main__about {
+    font-size: 20px;
+    line-height: 20px;
+    color: $bg-salomon;
+  }
+}

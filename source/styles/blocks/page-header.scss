@@ -1,0 +1,43 @@
+@media (min-width: $desktop-min-width) {
+  .page-header {
+    width: 100%;
+  }
+
+  .page-header__hero img {
+    width: 60%;
+    height: auto;
+    object-position: center;
+  }
+
+  .page-header-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-header__hero-image {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .page-header {
+    width: 100%;
+  }
+
+  .page-header__hero img {
+    width: 60%;
+    height: auto;
+  }
+
+  .page-header__hero-image {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+

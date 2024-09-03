@@ -2,3 +2,15 @@
   padding: 10px 0;
   bottom: 0;
 }
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .page-footer {
+  width: 100%;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .page-footer {
+    width: 100%;
+    }
+  }

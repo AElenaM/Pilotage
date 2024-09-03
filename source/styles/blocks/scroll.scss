@@ -20,8 +20,8 @@
   .back-to-top {
     padding: 15px;
     display: none;
-    bottom: 100px;           /* Отступ снизу */
-    right: 170px;            /* Отступ справа */
+    bottom: 150px;           /* Отступ снизу */
+    right: 400px;            /* Отступ справа */
   }
 
   .back-to-top svg {
@@ -29,3 +29,18 @@
     height: 60px;
   }
 }
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .back-to-top {
+    padding: 15px;
+    display: none;
+    bottom: 150px;           /* Отступ снизу */
+    right: 400px;            /* Отступ справа */
+  }
+
+  .back-to-top svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
