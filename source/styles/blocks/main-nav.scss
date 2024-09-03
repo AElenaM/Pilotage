@@ -27,3 +27,33 @@
   border-bottom: 2px solid $bg-blue;
   border-radius: 2px;
 }
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .maim-nav__list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    line-height: 14px;
+    font-family: $second-font;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .page__body {
+    width: 80%;
+    max-width: desktop-max-width;
+  }
+
+  .container {
+    padding: 40px;
+  }
+}

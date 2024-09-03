@@ -40,6 +40,8 @@ body {
   }
 
   .container {
+    min-width: 768px;
+    max-width: 1025px;
     padding: 20px;
   }
 }
@@ -56,6 +58,8 @@ body {
   }
 
   .container {
+    min-width: 1025px;
+    max-width: 1400px;
     padding: 40px;
   }
 }

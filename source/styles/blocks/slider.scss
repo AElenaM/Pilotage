@@ -32,6 +32,8 @@
     flex: 0 0 100%;
     box-sizing: border-box;
     object-fit: contain;
+    padding-top: 20px;
+    border-radius: 20px;
 }
 }
 
@@ -71,6 +73,9 @@
   flex: 0 0 100%;
   box-sizing: border-box;
   object-fit: contain;
+  background-color: rgba(184, 196, 196, .42);
+  border-radius: 4px;
+  padding: 10px 0 25px 0;
 }
 
 .carousel-item picture img,
@@ -82,7 +87,7 @@
 .nav-button {
   position: absolute;
   top: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   color: $base-color-text-white;
   border: none;
   padding: 10px;
@@ -93,10 +98,12 @@
 }
 
 .prev {
+  font-size: 50px;
   left: 10px;
 }
 
 .next {
+  font-size: 50px;
   right: 10px;
 }
 
@@ -109,7 +116,7 @@
 }
 
 .indicator {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: $bg-dark-blue;
   width: 10px;
   height: 10px;
   border-radius: 50%;
