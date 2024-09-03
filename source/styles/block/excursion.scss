@@ -1,3 +1,8 @@
+.page-main__excursion {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .excursion-header__item {
   display: flex;
   justify-content: center;
@@ -31,4 +36,53 @@
   margin-bottom: 0;
   box-sizing: border-box;
   text-align: justify;
+}
+
+.excursion-header__item--price {
+  color: $base-color-text-black;
+  font-weight: 800;
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .excursion-header__item {
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: 100%;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    float: left;
+  }
+
+  .excursion-header__item--description,
+  .excursion-header__item--price,
+  .excursion-header__item--info {
+    font-size: $primary-font;
+    font-size: 18px;
+    line-height: 22px;
+    flex: 1;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+    .excursion-header__item {
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: 100%;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    float: left;
+  }
+
+  .excursion-header__item--description,
+  .excursion-header__item--price,
+  .excursion-header__item--info {
+    font-size: $primary-font;
+    font-size: 18px;
+    line-height: 22px;
+    flex: 1;
+    padding: 0 20px;
+  }
 }

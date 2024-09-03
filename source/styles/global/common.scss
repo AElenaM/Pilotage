@@ -38,6 +38,10 @@ body {
   .page__body {
     width: 90%;
   }
+
+  .container {
+    padding: 20px;
+  }
 }
 
 @media (min-width: $desktop-min-width) {
@@ -49,6 +53,10 @@ body {
   .page__body {
     width: 80%;
     max-width: desktop-max-width;
+  }
+
+  .container {
+    padding: 40px;
   }
 }
 

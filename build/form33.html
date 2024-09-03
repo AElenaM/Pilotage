@@ -42,11 +42,16 @@
       </div>
     </header>
     <main class="page-main">
+      <h1 class="page-main__about">Наши экскурсии порадуют качеством и детским восторгом</h1>
       <h1 class="visually-hidden">«ВНЕКЛАССНЫЕ УРОКИ»</h1>
       <section class="page-main__excursion excursion">
         <div class="excursion-wrapper">
           <div class="excursion-header">
-            <img class="excursion-header__item" src="#" alt="«ВНЕКЛАССНЫЕ УРОКИ»" width="320" height="260">
+            <picture class="excursion-header__item">
+              <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/33/vneklassnie-uroki_hero@1x.jpg, images/33/vneklassnie-uroki_hero@2x.jpg 2x">
+              <source type="image/jpeg" media="(min-width: 768px)" srcset="images/33/vneklassnie-uroki_hero@1x.jpg, images/33/vneklassnie-uroki_hero@2x.jpg 2x">
+              <img src="images/33/vneklassnie-uroki_hero@1x.jpg" srcset="images/33/vneklassnie-uroki_hero@2x.jpg 2x" width="320" height="auto" alt="ВНЕКЛАССНЫЕ УРОКИ">
+            </picture>
             <p class="excursion-header__description">
               Школа XIX века какой она была? 📜
               <br>Какие направления науки изучали дети? 📚
