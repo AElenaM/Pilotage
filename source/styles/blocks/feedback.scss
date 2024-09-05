@@ -122,9 +122,9 @@
   }
 
   .feedback__title__lowercase {
-    font-size: 32px;
-    line-height: 34px;
-    font-style: 100;
+    font-size: 25px;
+    line-height: 30px;
+    font-style: normal;
   }
 
   .contact-form input[type="text"],
@@ -148,6 +148,19 @@
     margin-top: 20px;
     height: 100px;
   }
+
+  .success-message {
+    display:none;
+    font-size: 32px;
+    line-height: 30px;
+  }
+
+  .error-message {
+    display: none;
+    font-size: 32px;
+    line-height: 30px;
+  }
+
 }
 
 @media (min-width: $desktop-min-width) {
@@ -170,10 +183,11 @@
   }
 
   .feedback__title__lowercase {
-    font-size: 32px;
-    line-height: 34px;
-    font-style: 100;
+    font-size: 25px;
+    line-height: 30px;
+    font-style: normal;
   }
+
 
   .contact-form input[type="text"],
   .contact-form input[type="tel"],
@@ -197,4 +211,13 @@
     height: 100px;
   }
 
+  .success-message {
+    font-size: 32px;
+    line-height: 30px;
+  }
+
+  .error-message {
+    font-size: 32px;
+    line-height: 30px;
+  }
 }

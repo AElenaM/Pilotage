@@ -39,7 +39,7 @@
   background-color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  width: 300px;
+  width: max-content;
   text-align: center;
   border-radius: 5px;
 }
@@ -101,7 +101,6 @@
   display: none;
   position: fixed;
   left: 50%;
-  top: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
   background-color: white;
@@ -134,18 +133,58 @@
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   #openPopupButton {
-    bottom: 40px;
-    right: 390px;
+    bottom: 40px;           /* Отступ снизу */
+    right: 17%;            /* Отступ справа */
     width: 60px;
     height: auto;
+  }
+
+  .callback-form button,
+  .popup-content {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .success-message p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .callback-form input[type="text"],
+  .callback-form input[type="tel"],
+  .callback-form input[type="text"]::placeholder,
+  .callback-form input[type="tel"]::placeholder {
+    font-size: 24px;
+    padding: 20px;
+    margin: 20px 0;
   }
 }
 
 @media (min-width: $desktop-min-width) {
   #openPopupButton {
-    bottom: 40px;
-    right: 390px;
+    bottom: 120px;           /* Отступ снизу */
+    right: 55px;            /* Отступ справа */
     width: 60px;
     height: auto;
+  }
+
+  .callback-form button,
+  .popup-content {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .success-message p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .callback-form input[type="text"],
+  .callback-form input[type="tel"],
+  .callback-form input[type="text"]::placeholder,
+  .callback-form input[type="tel"]::placeholder {
+    font-size: 24px;
+    padding: 20px;
+    margin: 20px 0;
   }
 }

@@ -40,8 +40,8 @@ body {
   }
 
   .container {
-    min-width: 768px;
-    max-width: 1025px;
+    min-width: $tablet-min-width;
+    max-width: $tablet-max-width;
     padding: 20px;
   }
 }
@@ -53,16 +53,20 @@ body {
   }
 
   .page__body {
-    width: 80%;
-    max-width: desktop-max-width;
+    width: 90%;
+    max-width: $desktop-max-width;
   }
 
   .container {
-    min-width: 1025px;
-    max-width: 1400px;
+    max-width: $desktop-max-width;
     padding: 40px;
   }
 }
+$mobile-only-width: 360px;
+$tablet-min-width: 768px;
+$tablet-max-width: 1025px;
+$desktop-min-width: 1025px;
+$desktop-max-width: 1400px;
 
 a {
   text-decoration: none;
