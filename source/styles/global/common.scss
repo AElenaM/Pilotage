@@ -16,7 +16,7 @@ body {
   box-sizing: border-box;
   min-width: 320px;
   max-width: 1400px;
-  height: auto;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 7px;
   display: flex;
@@ -25,8 +25,11 @@ body {
   align-items: center;
   background-color: $bg-basic-gray;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  // overflow: hidden;
-  // word-wrap: break-word;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
 }
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
@@ -36,7 +39,7 @@ body {
   }
 
   .page__body {
-    width: 90%;
+    width: 80%;
   }
 
   .container {
@@ -62,11 +65,6 @@ body {
     padding: 40px;
   }
 }
-$mobile-only-width: 360px;
-$tablet-min-width: 768px;
-$tablet-max-width: 1025px;
-$desktop-min-width: 1025px;
-$desktop-max-width: 1400px;
 
 a {
   text-decoration: none;

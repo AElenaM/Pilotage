@@ -1,3 +1,4 @@
+
 .maim-nav__list {
   display: flex;
   justify-content: space-between;
@@ -14,6 +15,11 @@
   padding: 8px;
   padding-bottom: 2px;
   list-style-type: none;
+}
+
+.site-list__item--right {
+  margin: 0;
+  margin-left: auto;
 }
 
 .site-list__item--active {

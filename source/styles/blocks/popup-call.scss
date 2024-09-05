@@ -39,7 +39,8 @@
   background-color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  width: max-content;
+  width:300px;
+  height: auto;
   text-align: center;
   border-radius: 5px;
 }
@@ -139,6 +140,10 @@
     height: auto;
   }
 
+  .popup-class {
+    width: 500px;
+  }
+
   .callback-form button,
   .popup-content {
     font-size: 24px;
@@ -146,9 +151,21 @@
   }
 
   .success-message p {
-    font-size: 24px;
+    font-size: 32px;
     line-height: 30px;
   }
+
+  .success-message button {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 30px;
+  }
+
+  .error-message {
+    font-size: 32px;
+    line-height: 30px;
+  }
+
 
   .callback-form input[type="text"],
   .callback-form input[type="tel"],
@@ -174,8 +191,13 @@
     line-height: 30px;
   }
 
+  .popup-class {
+    width: 700px;
+    height: auto;
+  }
+
   .success-message p {
-    font-size: 24px;
+    font-size: 32px;
     line-height: 30px;
   }
 
@@ -186,5 +208,16 @@
     font-size: 24px;
     padding: 20px;
     margin: 20px 0;
+  }
+
+  .success-message button {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 30px;
+  }
+
+  .error-message {
+    font-size: 32px;
+    line-height: 30px;
   }
 }

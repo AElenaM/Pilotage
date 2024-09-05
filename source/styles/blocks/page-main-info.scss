@@ -7,6 +7,7 @@
   margin: auto;
   font-weight: 300;
   text-transform: initial;
+  margin-top: 20px ;
 }
 
 .page-main-info--bold {
@@ -18,11 +19,41 @@
   color: $bg-salomon;
 }
 
-.page-main__advantages {
-  margin-top: 20px ;
-}
-
 .features__foreword-info {
   text-transform: initial;
   color: $base-color-text-black;
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .page-main__advantages {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 20px;
+    width: 90%;
+  }
+
+  .page-main-info--bold {
+    text-align: center;
+    width: auto;
+    padding-top: 20px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .page-main__advantages {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 20px;
+    width: 90%;
+  }
+
+  .page-main-info--bold {
+    text-align: center;
+    width: auto;
+    padding-top: 20px;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }

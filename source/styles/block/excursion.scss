@@ -58,10 +58,11 @@
   .excursion-header__item--price,
   .excursion-header__item--info {
     font-size: $primary-font;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 30px;
     flex: 1;
     padding: 0 20px;
+    padding-top: 20px;
   }
 }
 
@@ -80,9 +81,10 @@
   .excursion-header__item--price,
   .excursion-header__item--info {
     font-size: $primary-font;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 24px;
+    line-height: 32px;
     flex: 1;
     padding: 0 20px;
+    padding-top: 20px;
   }
 }
