@@ -1,31 +1,3 @@
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     // Получение данных из формы
-//     $name = htmlspecialchars($_POST['name']);
-//     $phone = htmlspecialchars($_POST['phone']);
-//     $message = htmlspecialchars($_POST['message']);
-
-//     // Настройки электронной почты
-//     $to = "cieslikelena@gmail.com"; // Замените на ваш email
-//     $subject = "Новая заявка на обратную связь от $name";
-//     $headers = "From: $name" . "\r\n" .
-//                "X-Mailer: PHP/" . phpversion();
-
-//     // Формирование сообщения
-//     $emailMessage = "Имя: $name\n";
-//     $emailMessage .= "Ваш телефон: $phone\n";
-//     $emailMessage .= "Ваш комментарий:\n$message\n";
-
-//     // Отправка сообщения
-//     if (mail($to, $subject, $emailMessage, $headers)) {
-//         echo "<script>window.onload = function() { showSuccessMessage(); }</script>";
-//     } else {
-//         echo "Ошибка при отправке сообщения.";
-//     }
-// } else {
-//     echo "Некорректный запрос.";
-// }
-//
-
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars(trim($_POST["name"]));
