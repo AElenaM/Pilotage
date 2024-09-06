@@ -98,38 +98,46 @@
 }
 
 /* Стили для сообщения об успешной отправке */
-.success-message {
+.success-message-popup {
   display: none;
   position: fixed;
   left: 50%;
+  bottom: 30%;
   transform: translate(-50%, -50%);
   padding: 20px;
   background-color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  width: 300px;
+  width: auto;
   text-align: center;
   border-radius: 5px;
 }
 
-.success-message p {
+.success-message-popup p {
+  font-family: $second-font;
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .success-message button {
   font-family: $second-font;
-  margin-top: 10px;
-  padding: 10px;
-  background-color:$bg-dark-blue;
+  margin-top: 20px;
+  padding: 15px;
+  background-color:$bg-blue;
   color: white;
-  border: none;
   cursor: pointer;
-  font-size: 50px;
+  border: 0.5px solid transparent;
+  font-size: 18px;
+  border-radius: 5px;
+
 }
 
-.success-message button:hover {
-  background-color:$base-color-text-black;
+.success-message-popup button:hover {
+  background-color:$bg-blue;
+  border: 0.5px solid $bg-dark-blue;
+  border-radius: 5px;
+  background-color:$bg-dark-blue;
+  color: $base-color-text-white;
 }
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
@@ -150,18 +158,22 @@
     line-height: 30px;
   }
 
-  .success-message p {
+  .success-message-popup p {
     font-size: 32px;
     line-height: 30px;
   }
 
-  .success-message button {
+  .success-message-popup button {
+    font-family: $second-font;
     margin-top: 20px;
     padding: 15px;
-    font-size: 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: $bg-blue;
+    border: 0.5px solid $bg-blue;
   }
 
-  .error-message {
+  .error-message-popup {
     font-size: 32px;
     line-height: 30px;
   }
@@ -196,8 +208,8 @@
     height: auto;
   }
 
-  .success-message p {
-    font-size: 32px;
+  .success-message-popup p {
+    font-size: 18px;
     line-height: 30px;
   }
 
@@ -210,14 +222,20 @@
     margin: 20px 0;
   }
 
-  .success-message button {
+  .success-message-popup button {
+    font-family: $second-font;
     margin-top: 20px;
     padding: 15px;
-    font-size: 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: $bg-blue;
+    border: 0.5px solid $bg-dark-blue;
+
+
   }
 
-  .error-message {
-    font-size: 32px;
+  .error-messag-popup {
+    font-size: 18px;
     line-height: 30px;
   }
 }

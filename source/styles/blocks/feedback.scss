@@ -80,14 +80,19 @@
 /* Стили для сообщения об успешной отправке */
 .success-message {
   font-family: $second-font;
-  font-size: 16px;
   display: none;
-  padding: 10px;
-  margin-top: 10px;
-  background-color: $bg-blue;
+  background-color: $bg-dark-blue;
   color: $base-color-text-black;
-  border: 0.5px solid $bg-dark-blue;
+  border: 0.5px solid $bg-blue;
   border-radius: 5px;
+  font-size: 40px;
+  line-height: 30px;
+  margin-top: 20px;
+  width: calc(100% - 22px);
+  padding: 10px;
+  color: $base-color-text-white;
+  border: 0;
+  padding: 20px;
 }
 
 .error-message {
