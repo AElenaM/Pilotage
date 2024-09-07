@@ -373,6 +373,25 @@
           </div>
         </section>
         <section class="popup-call">
+<!-- Чекбокс для управления попапом -->
+<input type="checkbox" id="open-popup" style="display:none;">
+
+<!-- Плавающая кнопка открытия попапа -->
+<label for="open-popup" class="float-button">Связаться</label>
+
+<!-- Попап с формой -->
+<div class="popup">
+    <div class="popup-content">
+        <h2>Обратная связь</h2>
+        <!-- Форма отправляется на submit.php -->
+        <form action="submit.php" method="POST">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</div>        <!-- <section class="popup-call">
           <div id="overlay" class="overlay"></div>
           <div id="callbackPopup" class="popup-class">
             <div class="popup-content">
@@ -386,13 +405,13 @@
               </form>
             </div>
           </div>
-          <div id="successMessage" class="success-message-popup">
+          <div id="successMessagePopup" class="success-message-popup">
             <p>Мы Вам позвоним!!</p>
             <button id="closeSuccessMessage">Ок</button>
           </div>
-          <!-- Кнопка для открытия попапа вручную -->
-          <svg id="openPopupButton" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#00cde2;}.cls-2{fill:#00a4b5;}</style></defs><title>Phone</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16A11.88,11.88,0,0,1,52.12,64H52a51.91,51.91,0,0,1-11.64-1.31A52,52,0,0,1,0,12,12.06,12.06,0,0,1,10.74.07,10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28l5.2,15.62a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76-2.65,2.65a4,4,0,0,0-.89,4.32A38.09,38.09,0,0,0,35.45,49.12a4,4,0,0,0,4.32-.89l2.65-2.65,2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/><path class="cls-2" d="M21.63,16.9a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76L10.74.07A10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28Z"/><path class="cls-2" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16L42.42,45.58l2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/></g></g></svg>
-        </section>
+          Кнопка для открытия попапа вручную
+           <svg id="openPopupButton" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#00cde2;}.cls-2{fill:#00a4b5;}</style></defs><title>Phone</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16A11.88,11.88,0,0,1,52.12,64H52a51.91,51.91,0,0,1-11.64-1.31A52,52,0,0,1,0,12,12.06,12.06,0,0,1,10.74.07,10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28l5.2,15.62a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76-2.65,2.65a4,4,0,0,0-.89,4.32A38.09,38.09,0,0,0,35.45,49.12a4,4,0,0,0,4.32-.89l2.65-2.65,2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/><path class="cls-2" d="M21.63,16.9a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76L10.74.07A10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28Z"/><path class="cls-2" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16L42.42,45.58l2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/></g></g></svg>
+        </section> -->
         <section class="feedback" id="application-form">
           <div class="contact-form-container">
             <h3 class="feedback__title">Заявка
@@ -405,12 +424,6 @@
                 <textarea id="comment" name="comment" placeholder="Ваш комментарий" rows="2"></textarea>
                 <button type="submit">Отправить звявку</button>
             </form>
-
-            <?php if ($message_sent): ?>
-                <div class="success-message">Заявка отправлена!</div>
-            <?php elseif (!empty($error_message)): ?>
-                <div class="error-message"><?php echo $error_message; ?></div>
-            <?php endif; ?>
           </div>
         </section>
         <section class="scroll">
@@ -471,10 +484,10 @@
         </div>
       </footer>
     </div>
-    <script src="scripts/back-to-top.js"></script>
-    <script src="scripts/index-slider.js"></script>
-    <script src="scripts/share.js"></script>
     <script src="scripts/popup_call.js"></script>
-    <script src="scripts/send__email.js"></script>
+    <!-- <script src="scripts/back-to-top.js"></script>
+    <script src="scripts/index-slider.js"></script>
+    <script src="scripts/share.js"></script> -->
+    <!-- <script src="scripts/send__email.js"></script> -->
   </body>
 </html>

@@ -111,15 +111,15 @@
               <span id="closeCallbackPopup" class="close-button-class">&times;</span>
               <h2 class="popup-conten__info">Обратный звонок</h2>
               <span class="callback-form__info"> Всегда готовы ответить на Ваши вопросы в телефонном режиме</span><br>
-              <form class="callback-form" id="callbackForm" action="send_callback.php" method="POST">
+              <form class="callback-form" id="callbackForm" action="popup_call.php" method="POST">
                   <input type="text" id="name" name="name" placeholder="Ваше имя" required>
                   <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
                   <button type="submit">Отправить</button>
               </form>
             </div>
           </div>
-          <div id="successMessage" class="success-message">
-            <p>Ваш запрос успешно отправлен!</p>
+          <div id="successMessage" class="success-message-popup">
+            <p>Мы Вам позвоним!!</p>
             <button id="closeSuccessMessage">Ок</button>
           </div>
           <!-- Кнопка для открытия попапа вручную -->
@@ -131,7 +131,7 @@
               <p class="feedback__title__lowercase">для группового посещения от 25 человек. Если вы планируете посещение в индивидуальном порядке,
               позвоните нам по телефону 89138387770</p>
             </h3>
-            <form class="contact-form" action="" method="POST">
+            <form class="contact-form" action="send_email.php" method="POST">
                 <input type="text" id="name" name="name" placeholder="Ваше имя" required>
                 <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
                 <textarea id="comment" name="comment" placeholder="Ваш комментарий" rows="2"></textarea>
@@ -139,12 +139,11 @@
             </form>
 
             <?php if ($message_sent): ?>
-                <div class="success-message">Ваш запрос успешно отправлен!</div>
+                <div class="success-message">Заявка отправлена!</div>
             <?php elseif (!empty($error_message)): ?>
                 <div class="error-message"><?php echo $error_message; ?></div>
             <?php endif; ?>
           </div>
-        </section>
         <section class="scroll">
           <a href="#" class="back-to-top">
             <svg width="24" higth="42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 24a12 12 0 1 0-12-12 12.01 12.01 0 0 0 12 12Zm0-22a10 10 0 1 1-10 10 10.01 10.01 0 0 1 10-10Z"/><path d="M12 8a3 3 0 0 1 1.99.75l.84.78 2.87 2.82a1 1 0 1 1-1.4 1.43l-2.88-2.83c-.19-.19-.47-.44-.76-.7a1 1 0 0 0-1.32 0c-.3.26-.57.51-.75.7l-2.89 2.83a1 1 0 0 1-1.4-1.43l2.88-2.83c.2-.2.5-.48.83-.77a2.99 2.99 0 0 1 1.99-.75Z"/></svg>
