@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["source/scripts/back-to-top.js"],
-  "sourcesContent": ["window.addEventListener('scroll', function() {\n  const scrollPosition = window.scrollY;\n  const backToTopButton = document.querySelector('.back-to-top');\n\n  if (scrollPosition > 300) { // \u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u043C \u043A\u043D\u043E\u043F\u043A\u0443 \u043F\u043E\u0441\u043B\u0435 \u043F\u0440\u043E\u043A\u0440\u0443\u0442\u043A\u0438 \u043D\u0430 300px\n      backToTopButton.classList.add('show');\n  } else {\n      backToTopButton.classList.remove('show');\n  }\n});\n\ndocument.querySelector('.back-to-top').addEventListener('click', function(e) {\n  e.preventDefault();\n  window.scrollTo({ top: 0, behavior: 'smooth' });\n});\n"],
-  "mappings": ";AAAA,OAAO,iBAAiB,UAAU,WAAW;AAC3C,QAAM,iBAAiB,OAAO;AAC9B,QAAM,kBAAkB,SAAS,cAAc,cAAc;AAE7D,MAAI,iBAAiB,KAAK;AACtB,oBAAgB,UAAU,IAAI,MAAM;AAAA,EACxC,OAAO;AACH,oBAAgB,UAAU,OAAO,MAAM;AAAA,EAC3C;AACF,CAAC;AAED,SAAS,cAAc,cAAc,EAAE,iBAAiB,SAAS,SAAS,GAAG;AAC3E,IAAE,eAAe;AACjB,SAAO,SAAS,EAAE,KAAK,GAAG,UAAU,SAAS,CAAC;AAChD,CAAC;",
-  "names": []
-}

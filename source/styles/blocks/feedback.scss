@@ -11,218 +11,264 @@
   margin: auto;
 }
 
-.feedback__title {
-  font-family: $second-font;
-  font-size: 20px;
-  text-align: center;
-  margin: 0;
-}
-
-.feedback__title__lowercase {
-  font-size: 12px;
-  line-height: 14px;
-  font-weight: normal;
-  padding: 0 20px;
-  text-align: justify;
-  text-transform: initial;
-}
-
-// .feedback__container {
-//   padding: 0 20px;
+// .feedback__title {
+//   font-family: $second-font;
+//   font-size: 20px;
+//   text-align: center;
+//   margin: 0;
 // }
 
-/* Стили для формы */
-.contact-form-container {
-  background-color: $base-color-text-white;
+// .feedback__title__lowercase {
+//   font-size: 12px;
+//   line-height: 14px;
+//   font-weight: normal;
+//   padding: 0 20px;
+//   text-align: justify;
+//   text-transform: initial;
+// }
+
+// // .feedback__container {
+// //   padding: 0 20px;
+// // }
+
+// /* Стили для формы */
+// .contact-form-container {
+//   background-color: $base-color-text-white;
+//   padding: 20px;
+//   // box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+//   text-align: center;
+//   margin: 0;
+//   border-radius: 5px;
+//   align-items: center;
+// }
+
+// .contact-form input[type="text"], .contact-form input[type="tel"], .contact-form textarea {
+//   font-family: $second-font;
+//   font-size: 16px;
+//   width: calc(100% - 22px);
+//   padding: 10px;
+//   margin: 10px 0;
+//   box-sizing: border-box;
+//   border-radius: 5px;
+// }
+
+// .contact-form textarea {
+//   border: 0.5px solid $bg-blue;
+// }
+
+// .contact-form textarea:hover {
+//   border: 0.5px solid $bg-dark-blue;
+// }
+
+// .contact-form button {
+//   font-family: $second-font;
+//   font-size: 16px;
+//   width: calc(100% - 22px);  padding: 10px;
+//   background-color: $bg-dark-blue;
+//   color: white;
+//   border: none;
+//   cursor: pointer;
+//   border-radius: 5px;
+// }
+
+// .contact-form button:hover {
+//   color: $base-color-text-black;
+//   // background-color: $bg-blue;
+//   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+// }
+
+// /* Стили для сообщения об успешной отправке */
+// .success-message {
+//   font-family: $second-font;
+//   display: none;
+//   background-color: $bg-dark-blue;
+//   color: $base-color-text-black;
+//   border: 0.5px solid $bg-blue;
+//   border-radius: 5px;
+//   font-size: 40px;
+//   line-height: 30px;
+//   margin-top: 20px;
+//   width: calc(100% - 22px);
+//   padding: 10px;
+//   color: $base-color-text-white;
+//   border: 0;
+//   padding: 20px;
+// }
+
+// .error-message {
+//   font-family: $second-font;
+//   font-size: 16px;
+//   display: none;
+//   padding: 10px;
+//   margin-top: 10px;
+//   background-color: $bg-blue;
+//   color: $bg-salomon;
+//   border: 0.5px solid $bg-dark-blue;
+//   border-radius: 5px;
+// }
+
+// @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+//   .feedback {
+//     align-items: center;
+//     width: 90%;
+//     height: auto;
+//     line-height: 22px;
+//     margin-top: 30px;
+//     margin-bottom: 30px;
+//   }
+
+//   .contact-form-container {
+//     padding: 40px;
+//   }
+
+//   .feedback__title {
+//     font-size: 40px;
+//     line-height: 22px;
+//   }
+
+//   .feedback__title__lowercase {
+//     font-size: 25px;
+//     line-height: 30px;
+//     font-style: normal;
+//   }
+
+//   .contact-form input[type="text"],
+//   .contact-form input[type="tel"],
+//   .contact-form textarea {
+//     font-family: $second-font;
+//     font-size: 32px;
+//     padding: 20px;
+//     margin: 10px 0;
+//     font-style: normal;
+
+//   }
+
+//   .contact-form ::placeholder {
+//     font-size: 32px;
+//   }
+
+//   .contact-form button {
+//     font-size: 40px;
+//     line-height: 30px;
+//     margin-top: 20px;
+//     height: 100px;
+//   }
+
+//   .success-message {
+//     display:none;
+//     font-size: 32px;
+//     line-height: 30px;
+//   }
+
+//   .error-message {
+//     display: none;
+//     font-size: 32px;
+//     line-height: 30px;
+//   }
+
+// }
+
+// @media (min-width: $desktop-min-width) {
+//   .feedback {
+//     align-items: center;
+//     width: 90%;
+//     height: auto;
+//     line-height: 22px;
+//     margin-top: 30px;
+//     margin-bottom: 30px;
+//   }
+
+//   .contact-form-container {
+//     padding: 40px;
+//   }
+
+//   .feedback__title {
+//     font-size: 40px;
+//     line-height: 22px;
+//   }
+
+//   .feedback__title__lowercase {
+//     font-size: 25px;
+//     line-height: 30px;
+//     font-style: normal;
+//   }
+
+
+//   .contact-form input[type="text"],
+//   .contact-form input[type="tel"],
+//   .contact-form textarea {
+//     font-family: $second-font;
+//     font-size: 32px;
+//     padding: 20px;
+//     margin: 10px 0;
+//     font-style: normal;
+
+//   }
+
+//   .contact-form ::placeholder {
+//     font-size: 32px;
+//   }
+
+//   .contact-form button {
+//     font-size: 40px;
+//     line-height: 30px;
+//     margin-top: 20px;
+//     height: 100px;
+//   }
+
+//   .success-message {
+//     font-size: 32px;
+//     line-height: 30px;
+//   }
+
+//   .error-message {
+//     font-size: 32px;
+//     line-height: 30px;
+//   }
+// }
+
+.form-container {
+  background-color: #fff;
   padding: 20px;
-  // box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+h2 {
   text-align: center;
-  margin: 0;
-  border-radius: 5px;
-  align-items: center;
 }
 
-.contact-form input[type="text"], .contact-form input[type="tel"], .contact-form textarea {
-  font-family: $second-font;
-  font-size: 16px;
-  width: calc(100% - 22px);
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="tel"], textarea {
+  width: 100%;
   padding: 10px;
-  margin: 10px 0;
-  box-sizing: border-box;
-  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.contact-form textarea {
-  border: 0.5px solid $bg-blue;
-}
-
-.contact-form textarea:hover {
-  border: 0.5px solid $bg-dark-blue;
-}
-
-.contact-form button {
-  font-family: $second-font;
-  font-size: 16px;
-  width: calc(100% - 22px);  padding: 10px;
-  background-color: $bg-dark-blue;
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
   color: white;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
-  border-radius: 5px;
 }
 
-.contact-form button:hover {
-  color: $base-color-text-black;
-  // background-color: $bg-blue;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+button:hover {
+  background-color: #218838;
 }
 
-/* Стили для сообщения об успешной отправке */
-.success-message {
-  font-family: $second-font;
-  display: none;
-  background-color: $bg-dark-blue;
-  color: $base-color-text-black;
-  border: 0.5px solid $bg-blue;
-  border-radius: 5px;
-  font-size: 40px;
-  line-height: 30px;
-  margin-top: 20px;
-  width: calc(100% - 22px);
-  padding: 10px;
-  color: $base-color-text-white;
-  border: 0;
-  padding: 20px;
-}
-
-.error-message {
-  font-family: $second-font;
-  font-size: 16px;
-  display: none;
-  padding: 10px;
-  margin-top: 10px;
-  background-color: $bg-blue;
-  color: $bg-salomon;
-  border: 0.5px solid $bg-dark-blue;
-  border-radius: 5px;
-}
-
-@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
-  .feedback {
-    align-items: center;
-    width: 90%;
-    height: auto;
-    line-height: 22px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .contact-form-container {
-    padding: 40px;
-  }
-
-  .feedback__title {
-    font-size: 40px;
-    line-height: 22px;
-  }
-
-  .feedback__title__lowercase {
-    font-size: 25px;
-    line-height: 30px;
-    font-style: normal;
-  }
-
-  .contact-form input[type="text"],
-  .contact-form input[type="tel"],
-  .contact-form textarea {
-    font-family: $second-font;
-    font-size: 32px;
-    padding: 20px;
-    margin: 10px 0;
-    font-style: normal;
-
-  }
-
-  .contact-form ::placeholder {
-    font-size: 32px;
-  }
-
-  .contact-form button {
-    font-size: 40px;
-    line-height: 30px;
-    margin-top: 20px;
-    height: 100px;
-  }
-
-  .success-message {
-    display:none;
-    font-size: 32px;
-    line-height: 30px;
-  }
-
-  .error-message {
-    display: none;
-    font-size: 32px;
-    line-height: 30px;
-  }
-
-}
-
-@media (min-width: $desktop-min-width) {
-  .feedback {
-    align-items: center;
-    width: 90%;
-    height: auto;
-    line-height: 22px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .contact-form-container {
-    padding: 40px;
-  }
-
-  .feedback__title {
-    font-size: 40px;
-    line-height: 22px;
-  }
-
-  .feedback__title__lowercase {
-    font-size: 25px;
-    line-height: 30px;
-    font-style: normal;
-  }
-
-
-  .contact-form input[type="text"],
-  .contact-form input[type="tel"],
-  .contact-form textarea {
-    font-family: $second-font;
-    font-size: 32px;
-    padding: 20px;
-    margin: 10px 0;
-    font-style: normal;
-
-  }
-
-  .contact-form ::placeholder {
-    font-size: 32px;
-  }
-
-  .contact-form button {
-    font-size: 40px;
-    line-height: 30px;
-    margin-top: 20px;
-    height: 100px;
-  }
-
-  .success-message {
-    font-size: 32px;
-    line-height: 30px;
-  }
-
-  .error-message {
-    font-size: 32px;
-    line-height: 30px;
-  }
+#statusMessage {
+  margin-top: 15px;
+  color: green;
+  text-align: center;
+  font-weight: bold;
 }
