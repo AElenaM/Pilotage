@@ -1,0 +1,143 @@
+
+/* Основные стили для попапа */
+.popup-class, .overlay, .success-message-popup {
+  display: none;
+}
+
+.success-message-popup p {
+  background-color: $bg-blue;
+  color: $base-color-text-black;
+  font-size: 24px;
+  margin: 30px 0;
+  font-size: 24px;
+}
+
+.popup-class, .success-message-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 300px;
+  width: 100%;
+  font-family: $second-font;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.success-message-popup p {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+  cursor: pointer;
+  font-size: 50px;
+  color: $bg-basic-gray;
+}
+
+.close-button {
+  opacity: 1.5;
+}
+
+.success-message-popup {
+  background-color: #d4edda;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+// .fixed-button {
+//   position: fixed;
+//   bottom: 20px;
+//   right: 20px;
+//   // background-color: #00cde2;
+//   border: none;
+//   color: red;
+//   padding: 10px 20px;
+//   cursor: pointer;
+//   border-radius: 5px;
+//   font-size: 16px;
+// }
+
+// .fixed-button:hover {
+//   background-color: #00a4b5;
+// }
+
+// .fixed-button{
+//   margin-top: 10px;
+//   padding: 10px 20px;
+//   cursor: pointer;
+//   border: none;
+//   background-color: #00cde2;
+//   color: white;
+//   border-radius: 5px;
+// }
+
+
+.popup-content input[type="text"],
+.popup-content input[type="tel"],
+.popup-content textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: $second-font;
+  font-size: 18px;
+  color: $base-color-text-black;
+}
+
+.popup-content button {
+  font-size: 18px;
+  width: 80%;
+  padding: 10px;
+}
+
+.fixed-button-svg {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.fixed-button-svg:hover {
+opacity: 0.5;
+}
+
+
+.popup-content__title {
+  font-family: $second-font;
+  font-size: 28px;
+  line-height: 20px;
+}
+
+.popup-content__title__lowercase {
+  font-family: $second-font;
+  font-size: 18px;
+  line-height: 18px;
+
+}
