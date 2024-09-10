@@ -11,46 +11,88 @@
   margin: auto;
 }
 
-// .feedback__title {
-//   font-family: $second-font;
-//   font-size: 20px;
-//   text-align: center;
-//   margin: 0;
-// }
+.feedback__title {
+  font-family: $second-font;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
 
-// .feedback__title__lowercase {
-//   font-size: 12px;
-//   line-height: 14px;
-//   font-weight: normal;
-//   padding: 0 20px;
-//   text-align: justify;
-//   text-transform: initial;
-// }
+.feedback__title__lowercase {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: normal;
+  padding: 0 20px;
+  text-align: justify;
+  text-transform: initial;
+}
 
-// // .feedback__container {
-// //   padding: 0 20px;
-// // }
+.feedback__container {
+  padding: 0 20px;
+}
 
-// /* Стили для формы */
-// .contact-form-container {
-//   background-color: $base-color-text-white;
-//   padding: 20px;
-//   // box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-//   text-align: center;
-//   margin: 0;
-//   border-radius: 5px;
-//   align-items: center;
-// }
+.form-container {
+  background-color: $base-color-text-white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: auto;
+  margin: 0;
+  align-items: center;
+}
 
-// .contact-form input[type="text"], .contact-form input[type="tel"], .contact-form textarea {
-//   font-family: $second-font;
-//   font-size: 16px;
-//   width: calc(100% - 22px);
-//   padding: 10px;
-//   margin: 10px 0;
-//   box-sizing: border-box;
-//   border-radius: 5px;
-// }
+h2 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="tel"], textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: $second-font;
+  font-size: 16px;
+}
+
+button {
+  font-family: $second-font;
+  font-size: 16px;
+  width: calc(100% - 22px);  padding: 10px;
+  background-color: $bg-dark-blue;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: $base-color-text-black;
+  background-color: $bg-blue;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#statusMessage {
+  margin-top: 20px;
+  color: $base-color-text-black;
+  text-align: center;
+  font-weight: bold;
+  font-family: $second-font;
+  font-size: 40px;
+  line-height: 30px;
+  width: calc(100% - 22px);
+  padding: 20px;
+}
+
+
+
+
 
 // .contact-form textarea {
 //   border: 0.5px solid $bg-blue;
@@ -60,22 +102,6 @@
 //   border: 0.5px solid $bg-dark-blue;
 // }
 
-// .contact-form button {
-//   font-family: $second-font;
-//   font-size: 16px;
-//   width: calc(100% - 22px);  padding: 10px;
-//   background-color: $bg-dark-blue;
-//   color: white;
-//   border: none;
-//   cursor: pointer;
-//   border-radius: 5px;
-// }
-
-// .contact-form button:hover {
-//   color: $base-color-text-black;
-//   // background-color: $bg-blue;
-//   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-// }
 
 // /* Стили для сообщения об успешной отправке */
 // .success-message {
@@ -227,48 +253,3 @@
 //   }
 // }
 
-.form-container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-}
-
-h2 {
-  text-align: center;
-}
-
-label {
-  display: block;
-  margin: 10px 0 5px;
-}
-
-input[type="text"], input[type="tel"], textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #218838;
-}
-
-#statusMessage {
-  margin-top: 15px;
-  color: green;
-  text-align: center;
-  font-weight: bold;
-}
