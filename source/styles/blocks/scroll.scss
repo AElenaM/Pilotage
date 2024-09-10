@@ -1,7 +1,7 @@
 .back-to-top {
   position: fixed;        /* Фиксируем кнопку на экране */
-  bottom: 80px;           /* Отступ снизу */
-  right: 20px;            /* Отступ справа */
+  bottom: 142px;
+  right: 150px;           /* Отступ справа */
   padding: 10px 15px;     /* Внутренние отступы */
   display: none;          /* Скрываем кнопку по умолчанию */
   transition: opacity 0.3s ease-in-out; /* Плавное появление */
@@ -20,8 +20,8 @@
   .back-to-top {
     padding: 15px;
     display: none;
-    bottom: 30px;           /* Отступ снизу */
-    right: 60px;            /* Отступ справа */
+    bottom: 112px;
+    right: 240px;         /* Отступ справа */
   }
 
   .back-to-top svg {
@@ -34,8 +34,8 @@
   .back-to-top {
     padding: 15px;
     display: none;
-    bottom: 30px;           /* Отступ снизу */
-    right: 55px;            /* Отступ справа */
+    bottom: 112px;
+    right: 138px;   /* Отступ справа */
   }
 
   .back-to-top svg {
