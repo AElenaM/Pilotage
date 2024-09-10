@@ -1,15 +1,16 @@
 
 /* Основные стили для попапа */
 .popup-class, .overlay, .success-message-popup {
-  display: none;
+  // display: none;
 }
 
 .success-message-popup p {
-  background-color: $bg-blue;
-  color: $base-color-text-black;
+  color: $base-color-text-white;
   font-size: 24px;
   margin: 30px 0;
   font-size: 24px;
+  margin: 10px 0;
+  line-height: 18px;
 }
 
 .popup-class, .success-message-popup {
@@ -17,7 +18,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: $base-color-text-white;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1001;
@@ -30,10 +31,8 @@
   border-radius: 5px;
 }
 
-.success-message-popup p {
-  margin: 10px 0;
-  font-size: 14px;
-  line-height: 18px;
+.success-message-popup {
+  background-color: $bg-dark-blue;
 }
 
 .overlay {
@@ -52,47 +51,12 @@
   right: 22px;
   cursor: pointer;
   font-size: 50px;
-  color: $bg-basic-gray;
+  color: $base-color-text-black;
 }
 
-.close-button {
-  opacity: 1.5;
+.close-button:hover {
+  opacity: 0.5;
 }
-
-.success-message-popup {
-  background-color: #d4edda;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-// .fixed-button {
-//   position: fixed;
-//   bottom: 20px;
-//   right: 20px;
-//   // background-color: #00cde2;
-//   border: none;
-//   color: red;
-//   padding: 10px 20px;
-//   cursor: pointer;
-//   border-radius: 5px;
-//   font-size: 16px;
-// }
-
-// .fixed-button:hover {
-//   background-color: #00a4b5;
-// }
-
-// .fixed-button{
-//   margin-top: 10px;
-//   padding: 10px 20px;
-//   cursor: pointer;
-//   border: none;
-//   background-color: #00cde2;
-//   color: white;
-//   border-radius: 5px;
-// }
-
 
 .popup-content input[type="text"],
 .popup-content input[type="tel"],
@@ -100,22 +64,29 @@
   width: calc(100% - 22px);
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: 0.5px solid #ccc;
   border-radius: 5px;
   font-family: $second-font;
   font-size: 18px;
   color: $base-color-text-black;
 }
 
+.popup-class input:hover {
+  border: 0.5px solid $bg-dark-blue
+  }
+
+.popup-content ::placeholder {
+  font-size: 18px;
+}
+
 .popup-content button {
   font-size: 18px;
-  width: 80%;
+  width: 100%;
   padding: 10px;
 }
 
 .fixed-button-svg {
   padding: 10px 20px;
-  color: white;
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -139,5 +110,139 @@ opacity: 0.5;
   font-family: $second-font;
   font-size: 18px;
   line-height: 18px;
+  text-transform: lowercase;
+}
 
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+
+  .success-message-popup p {
+    font-size: 32px;
+    margin: 20px 0;
+    line-height: 18px;
+  }
+
+  .popup-class, .success-message-popup {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+
+
+  .close-button {
+    font-size: 50px;
+    color: $base-color-text-black;
+  }
+
+  .close-button:hover {
+    opacity: 0.5;
+  }
+
+  .popup-content input[type="text"],
+  .popup-content input[type="tel"],
+  .popup-content textarea {
+    margin: 20px 0;
+    border: 0.5px solid #ccc;
+    border-radius: 5px;
+    font-family: $second-font;
+    font-size: 18px;
+    color: $base-color-text-black;
+  }
+
+  .popup-content::placeholder {
+    font-size: 24px;
+  }
+
+  .popup-content button {
+    font-size: 32px;
+    padding: 20px;
+  }
+
+  .fixed-button-svg {
+    padding: 10px 20px;
+    font-size: 32px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+
+  .popup-content__title {
+    font-size: 32px;
+    line-height: 20px;
+  }
+
+  .popup-content__title__lowercase {
+    font-size: 24px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .success-message-popup p {
+    font-size: 32px;
+    margin: 20px 0;
+    line-height: 18px;
+  }
+
+  .popup-class, .success-message-popup {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+
+
+  .close-button {
+    font-size: 50px;
+    color: $base-color-text-black;
+  }
+
+  .close-button:hover {
+    opacity: 0.5;
+  }
+
+  .popup-content input[type="text"],
+  .popup-content input[type="tel"],
+  .popup-content textarea {
+    margin: 20px 0;
+    border: 0.5px solid #ccc;
+    border-radius: 5px;
+    font-family: $second-font;
+    font-size: 24px;
+    color: $base-color-text-black;
+  }
+
+  .popup-content ::placeholder {
+    font-size: 24px;
+  }
+
+  .popup-content button {
+    font-size: 32px;
+    padding: 20px;
+  }
+
+  .fixed-button-svg {
+    padding: 10px 20px;
+    font-size: 32px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+
+  .popup-content__title {
+    font-size: 32px;
+    line-height: 20px;
+  }
+
+  .popup-content__title__lowercase {
+    font-size: 24px;
+    line-height: 20px;
+  }
 }
