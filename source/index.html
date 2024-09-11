@@ -372,65 +372,42 @@
             </div>
           </div>
         </section>
-        <!-- <section class="popup-call"> -->
-<!-- Чекбокс для управления попапом -->
-<!-- <input type="checkbox" id="open-popup" style="display:none;"> -->
-
-<!-- Плавающая кнопка открытия попапа -->
-<!-- <label for="open-popup" class="float-button">Связаться</label> -->
-
-<!-- Попап с формой -->
-<!-- <div class="popup">
-    <div class="popup-content">
-        <h2>Обратная связь</h2>
-        Форма отправляется на submit.php -->
-        <!-- <form action="submit.php" method="POST">
-            <input type="text" name="name" placeholder="Ваше имя" required>
-            <input type="email" name="email" placeholder="Ваш email" required>
-            <textarea name="message" placeholder="Ваше сообщение" required></textarea>
-            <button type="submit">Отправить</button>
-        </form>
-    </div>
-</div>      -->
-<!-- Попап "Обратный звонок" -->
-<section class="popup-call">
-  <div id="overlay" class="overlay"></div>
-  <div id="callbackPopup" class="popup-class">
-      <div class="popup-content">
-          <span id="closeCallbackPopup" class="close-button">&times;</span>
-          <h2 class="popup-content__title">Обратный звонок</h2>
-          <p class="popup-content__title__lowercase">Всегда готовы ответить на Ваши вопросы в телефонном режиме</p>
-          <form id="callbackForm" action="popup_call.php" method="POST">
-              <input type="text" id="name" name="name" placeholder="Ваше имя" required><br>
-              <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required><br>
-              <button type="submit">Заказать обратный звонок</button>
-          </form>
-      </div>
-  </div>
-
-  <!-- Сообщение об успешной отправке -->
-  <div id="successMessagePopup" class="success-message-popup">
-      <p>Мы вам перезвоним!</p>
-      <span id="closeSuccessMessage" class="close-button">&times;</span>
-  </div>
-
-  <!-- Кнопка для открытия попапа -->
-  <a id="openPopupButton" class="fixed-button">
-    <svg class="fixed-button-svg" width="64px" height="64px" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#00cde2;}.cls-2{fill:#00a4b5;}</style></defs><title>Phone</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16A11.88,11.88,0,0,1,52.12,64H52a51.91,51.91,0,0,1-11.64-1.31A52,52,0,0,1,0,12,12.06,12.06,0,0,1,10.74.07,10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28l5.2,15.62a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76-2.65,2.65a4,4,0,0,0-.89,4.32A38.09,38.09,0,0,0,35.45,49.12a4,4,0,0,0,4.32-.89l2.65-2.65,2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/><path class="cls-2" d="M21.63,16.9a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76L10.74.07A10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28Z"/><path class="cls-2" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16L42.42,45.58l2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/></g></g></svg>
-  </a>
-</section>
+        <section class="popup-call">
+          <div id="overlay" class="overlay"></div>
+          <div id="callbackPopup" class="popup-class">
+            <div class="popup-content">
+              <span id="closeCallbackPopup" class="close-button">&times;</span>
+              <h2 class="popup-content__title">Обратный звонок</h2>
+              <p class="popup-content__title__lowercase">Всегда готовы ответить на Ваши вопросы в телефонном режиме</p>
+              <form id="callbackForm" action="popup_call.php" method="POST">
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required><br>
+                <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required><br>
+                <button type="submit">Заказать обратный звонок</button>
+              </form>
+            </div>
+          </div>
+          <!-- Сообщение об успешной отправке -->
+          <div id="successMessagePopup" class="success-message-popup">
+              <p>Мы вам перезвоним!</p>
+              <span id="closeSuccessMessage" class="close-button">&times;</span>
+          </div>
+          <!-- Кнопка для открытия попапа -->
+          <a id="openPopupButton" class="fixed-button">
+            <svg class="fixed-button-svg" width="64px" height="64px" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#00cde2;}.cls-2{fill:#00a4b5;}</style></defs><title>Phone</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16A11.88,11.88,0,0,1,52.12,64H52a51.91,51.91,0,0,1-11.64-1.31A52,52,0,0,1,0,12,12.06,12.06,0,0,1,10.74.07,10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28l5.2,15.62a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76-2.65,2.65a4,4,0,0,0-.89,4.32A38.09,38.09,0,0,0,35.45,49.12a4,4,0,0,0,4.32-.89l2.65-2.65,2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/><path class="cls-2" d="M21.63,16.9a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76L10.74.07A10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28Z"/><path class="cls-2" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16L42.42,45.58l2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/></g></g></svg>
+          </a>
+        </section>
         <sectionc class="feedback">
           <div class="form-container">
             <form id="requestForm" method="POST" action="send.php">
-                <h2 class="feedback__title">Заявка</h2>
-                <p class="feedback__title__lowercase">для группового посещения от 25 человек. Если вы планируете посещение в индивидуальном порядке,
-                  позвоните нам по телефону 89138387770</p>
-                </h3>
-                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
-                <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
-                <textarea id="comment" name="comment" placeholder="Ваш коментарий" rows="2"></textarea>
-                <button type="submit" id="submitBtn">Отправить заявку на экскурсию</button>
-                <p id="statusMessage"></p>
+              <h2 class="feedback__title">Заявка</h2>
+              <p class="feedback__title__lowercase">для группового посещения от 25 человек. Если вы планируете посещение в индивидуальном порядке,
+                позвоните нам по телефону 89138387770</p>
+              </h3>
+              <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+              <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+              <textarea id="comment" name="comment" placeholder="Ваш коментарий" rows="2"></textarea>
+              <button type="submit" id="submitBtn">Отправить заявку на экскурсию</button>
+              <p id="statusMessage"></p>
             </form>
           </div>
         </sectionc>
@@ -476,9 +453,9 @@
               <li class="copyright__item">
                 <a class="copyright__item--link" href="#">
                   <picture>
-                    <source type="image/png" media="(min-width: 1440px)" srcset="images/icons/logo@1x.png 1x, images/icons/logo@2x.png 2x">
-                    <source type="image/png" media="(min-width: 768px)" srcset="images/icons/logo@1x.png 1x, images/icons/logo@2x.png 2x">
-                    <img src="images/icons/logo@1x.png" srcset="images/icons/logo@2x.png 2x" width="100" height="100" alt="Logo polotage">
+                    <source type="image/png" media="(min-width: 1440px)" srcset="images/logo-footer@1x.png 1x, images/logo-footer@2x.png 2x">
+                    <source type="image/png" media="(min-width: 768px)" srcset="images/logo-footer@1x.png 1x, images/logo-footer@2x.png 2x">
+                    <img src="images/logo-footer@1x.png" srcset="images/logo-footer@2x.png 2x" width="100" height="100" alt="Logo polotage">
                   </picture>
                 </a>
               </li>

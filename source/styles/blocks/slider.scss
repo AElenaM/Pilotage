@@ -33,7 +33,7 @@
     box-sizing: border-box;
     object-fit: contain;
     padding-top: 20px;
-    border-radius: 20px;
+    // border-radius: 20px;
 }
 }
 
@@ -50,7 +50,7 @@
 
   .carousel-wrapper {
     display: flex;
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
     align-items: center;
   }
 
@@ -90,7 +90,6 @@
   background-color: transparent;
   color: $base-color-text-white;
   border: none;
-  padding: 10px;
   cursor: pointer;
   border-radius: 50%;
   user-select: none;

@@ -76,22 +76,25 @@
           <div id="overlay" class="overlay"></div>
           <div id="callbackPopup" class="popup-class">
             <div class="popup-content">
-              <span id="closeCallbackPopup" class="close-button-class">&times;</span>
-              <h2 class="popup-conten__info">Обратный звонок</h2>
-              <span class="callback-form__info"> Всегда готовы ответить на Ваши вопросы в телефонном режиме</span><br>
-              <form class="callback-form" id="callbackForm" action="popup_call.php" method="POST">
-                  <input type="text" id="name" name="name" placeholder="Ваше имя" required>
-                  <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
-                  <button type="submit">Отправить</button>
+              <span id="closeCallbackPopup" class="close-button">&times;</span>
+              <h2 class="popup-content__title">Обратный звонок</h2>
+              <p class="popup-content__title__lowercase">Всегда готовы ответить на Ваши вопросы в телефонном режиме</p>
+              <form id="callbackForm" action="popup_call.php" method="POST">
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required><br>
+                <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required><br>
+                <button type="submit">Заказать обратный звонок</button>
               </form>
             </div>
           </div>
-          <div id="successMessage" class="success-message-popup">
-            <p>Мы Вам позвоним!!</p>
-            <button id="closeSuccessMessage">Ок</button>
+          <!-- Сообщение об успешной отправке -->
+          <div id="successMessagePopup" class="success-message-popup">
+              <p>Мы вам перезвоним!</p>
+              <span id="closeSuccessMessage" class="close-button">&times;</span>
           </div>
-          <!-- Кнопка для открытия попапа вручную -->
-          <svg id="openPopupButton" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#00cde2;}.cls-2{fill:#00a4b5;}</style></defs><title>Phone</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16A11.88,11.88,0,0,1,52.12,64H52a51.91,51.91,0,0,1-11.64-1.31A52,52,0,0,1,0,12,12.06,12.06,0,0,1,10.74.07,10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28l5.2,15.62a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76-2.65,2.65a4,4,0,0,0-.89,4.32A38.09,38.09,0,0,0,35.45,49.12a4,4,0,0,0,4.32-.89l2.65-2.65,2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/><path class="cls-2" d="M21.63,16.9a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76L10.74.07A10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28Z"/><path class="cls-2" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16L42.42,45.58l2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/></g></g></svg>
+          <!-- Кнопка для открытия попапа -->
+          <a id="openPopupButton" class="fixed-button">
+            <svg class="fixed-button-svg" width="64px" height="64px" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#00cde2;}.cls-2{fill:#00a4b5;}</style></defs><title>Phone</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16A11.88,11.88,0,0,1,52.12,64H52a51.91,51.91,0,0,1-11.64-1.31A52,52,0,0,1,0,12,12.06,12.06,0,0,1,10.74.07,10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28l5.2,15.62a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76-2.65,2.65a4,4,0,0,0-.89,4.32A38.09,38.09,0,0,0,35.45,49.12a4,4,0,0,0,4.32-.89l2.65-2.65,2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/><path class="cls-2" d="M21.63,16.9a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76L10.74.07A10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28Z"/><path class="cls-2" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16L42.42,45.58l2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/></g></g></svg>
+          </a>
         </section>
         <sectionc class="feedback">
           <div class="form-container">
@@ -103,7 +106,6 @@
                 <input type="text" id="name" name="name" placeholder="Ваше имя" required>
                 <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
                 <textarea id="comment" name="comment" placeholder="Ваш коментарий" rows="2"></textarea>
-
                 <button type="submit" id="submitBtn">Отправить заявку на экскурсию</button>
                 <p id="statusMessage"></p>
             </form>
@@ -111,7 +113,7 @@
         </sectionc>
         <section class="scroll">
           <a href="#" class="back-to-top">
-            <svg width="24" higth="42" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 24a12 12 0 1 0-12-12 12.01 12.01 0 0 0 12 12Zm0-22a10 10 0 1 1-10 10 10.01 10.01 0 0 1 10-10Z"/><path d="M12 8a3 3 0 0 1 1.99.75l.84.78 2.87 2.82a1 1 0 1 1-1.4 1.43l-2.88-2.83c-.19-.19-.47-.44-.76-.7a1 1 0 0 0-1.32 0c-.3.26-.57.51-.75.7l-2.89 2.83a1 1 0 0 1-1.4-1.43l2.88-2.83c.2-.2.5-.48.83-.77a2.99 2.99 0 0 1 1.99-.75Z"/></svg>
+            <svg width="42" higth="42" viewBox="0 0 24 24"><path d="M12 24a12 12 0 1 0-12-12 12.01 12.01 0 0 0 12 12Zm0-22a10 10 0 1 1-10 10 10.01 10.01 0 0 1 10-10Z"/><path d="M12 8a3 3 0 0 1 1.99.75l.84.78 2.87 2.82a1 1 0 1 1-1.4 1.43l-2.88-2.83c-.19-.19-.47-.44-.76-.7a1 1 0 0 0-1.32 0c-.3.26-.57.51-.75.7l-2.89 2.83a1 1 0 0 1-1.4-1.43l2.88-2.83c.2-.2.5-.48.83-.77a2.99 2.99 0 0 1 1.99-.75Z"/></svg>
           </a>
         </section>
       </main>
@@ -151,9 +153,9 @@
               <li class="copyright__item">
                 <a class="copyright__item--link" href="#">
                   <picture>
-                    <source type="image/png" media="(min-width: 1440px)" srcset="images/icons/logo@1x.png, images/icons/logo@2x.png 2x">
-                    <source type="image/png" media="(min-width: 768px)" srcset="images/icons/logo@1x.png, images/icons/logo@2x.png 2ximages/25/v_gosti-chaski-hero@1x.jpeg, images/25/v_gosti-chaski-hero@2x.jpeg 2x">
-                    <img src="images/icons/logo@1x.png" srcset="images/icons/logo@2x.png 2x" width="100" height="100" alt="Logo polotage">
+                    <source type="image/png" media="(min-width: 1440px)" srcset="images/logo-footer@1x.png, images/logo-footer@2x.png 2x">
+                    <source type="image/png" media="(min-width: 768px)" srcset="images/logo-footer@1x.png, images/logo-footer@2x.png 2x">
+                    <img src="images/logo-footer@1x.png" srcset="images/logo-footer@2x.png 2x" width="100" height="100" alt="Logo polotage">
                   </picture>
                 </a>
               </li>
@@ -167,10 +169,10 @@
         </div>
       </footer>
     </div>
+    <script src="scripts/popup.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/back-to-top.js"></script>
-    <script src="scripts/index.js"></script>
+    <script src="scripts/index-slider.js"></script>
     <script src="scripts/share.js"></script>
-    <script src="scripts/popup_call.js"></script>
   </body>
 </html>
