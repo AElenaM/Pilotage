@@ -38,80 +38,119 @@
           </div>
         </div>
       </header>
-
-    <main class="page-main">
-      <h1 class="visually-hidden">Я – ШОКОЛАТЬЕ 6+</h1>
-      <section class="page-main__excursion excursion">
-        <div class="excursion-wrapper">
-          <div class="excursion-header">
-            <img class="excursion-header-item" src="#" alt="Я – ШОКОЛАТЬЕ 6+" width="320" height="260">
-            <p class="excursion-header-item--description">
-              (Производство бельгийского шоколада)
-              Приглашаем больших и маленьких сладкоежек на увлекательную экскурсию!
-              Облачась в фирменный  колпак и фартук, Вы почувствуете себя настоящим Шоколатье!
-              Прикоснетесь к Таинству создания шоколадных конфет! 🧙🏻‍♀️💫✨
-              Воплотите в жизнь свою самую Сладкую Мечту 💫- создадите собственную плитку настоящего Бельгийского шоколада!🤎
-              Премиальная марка шоколада  Barry Callebaut 🇧🇪 поразит вас своей нежностью и насыщенным букетом вкуса!
-              Каждый сможет попробовать шоколад, начинки и сладкие украшения и конечно - забрать  свою плитку с собой 🍫✨
-              Нас ждёт настоящий  фонтан из Бельгийского шоколада и сочетания свежих фруктов и сладкого лакомства!🤎
-            </p>
-            <p class="excursion-header-item--price">
-              Стоимость для групп от 25 человек: 2700 руб/чел.
-            </p>
-            <p class="excursion-header-item--info">
-              В стоимость включено: автобус от школы/детского сада, экскурсионная программа, мастер-класс, дегустация, шоколадный фонтан с фруктами, фотограф (фото в электронном виде), именные грамоты, видеоролик.            </p>
+      <main class="page-main">
+        <h1 class="page-main__about">Наши экскурсии порадуют качеством и детским восторгом</h1>
+        <div class="page-main__about-line"></div>
+        <p class="visually-hidden">Я – ШОКОЛАТЬЕ 6+</p>
+        <section class="page-main__excursion excursion">
+          <div class="excursion-wrapper">
+            <div class="excursion-header">
+              <picture class="excursion-header__item">
+                <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/14/ya-schokolatje-hero@1x.jpeg, images/14/ya-schokolatje-hero@2x.jpeg 2x">
+                <source type="image/jpeg" media="(min-width: 768px)" srcset="images/14/ya-schokolatje-hero@1x.jpeg, images/14/ya-schokolatje-hero@2x.jpeg 2x">
+                <img src="images/14/ya-schokolatje-hero@1x.jpeg" srcset="images/14/ya-schokolatje-hero@2x.jpeg 2x" width="320" height="auto" alt="Я – ШОКОЛАТЬЕ 6+">
+              </picture>
+              <p class="excursion-header__item--description">
+                Производство бельгийского шоколада
+                <br>Приглашаем больших и маленьких сладкоежек на увлекательную экскурсию!
+                <br>Облачась в фирменный  колпак и фартук, Вы почувствуете себя настоящим Шоколатье!
+                <br>Прикоснетесь к Таинству создания шоколадных конфет! 🧙🏻‍♀️💫✨
+                <br>Воплотите в жизнь свою самую Сладкую Мечту 💫- создадите собственную плитку настоящего Бельгийского шоколада!🤎
+                <br>Премиальная марка шоколада  Barry Callebaut 🇧🇪 поразит вас своей нежностью и насыщенным букетом вкуса!
+                <br>Каждый сможет попробовать шоколад, начинки и сладкие украшения и конечно - забрать  свою плитку с собой 🍫✨
+                <br>Нас ждёт настоящий  фонтан из Бельгийского шоколада и сочетания свежих фруктов и сладкого лакомства!🤎
+              </p>
+              <p class="excursion-header__item--price">
+                Стоимость для групп от 25 человек: 2700 руб/чел.
+              </p>
+              <p class="excursion-header__item--info">
+                В стоимость включено: автобус от школы/детского сада, экскурсионная программа, мастер-класс, дегустация, шоколадный фонтан с фруктами, фотограф (фото в электронном виде), именные грамоты, видеоролик.            </p>
+              <p></p>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="page-main_slides">
-        <div class="sliders-images">
-          <img src="#" alt="Я – ШОКОЛАТЬЕ 6+ фото1">
-          <img src="#" alt="Я – ШОКОЛАТЬЕ 6+ фото2">
-          <img src="#" alt="Я – ШОКОЛАТЬЕ 6+ фото3">
-          <img src="#" alt="Я – ШОКОЛАТЬЕ 6+ фото4">
-          <img src="#" alt="Я – ШОКОЛАТЬЕ 6+ фото5">
-        </div>
-        <div class="sliders-buttons">
-          <button class="button--click-previous">
-            onclick="previous()">Назад
-          </button>
-          <button>
-            onclick="next()">Вперёд
-          </button>
-        </div>
-      </section>
-      <section class="popup">
-        <button onclick="openPopup()">Открыть всплывающее окно</button>
-        <div class="popup__info">
-          <button onclick="closePopup()">Закрыть</button>
-          <h3 class="popup__title">Оставить заявку на экскурсию</h3>
-          <div class="feedback-container">
-            <div class="form-field">
-              <label for="name" class="visually-hidden">Имя:</label>
-              <input type="text" id="name" placeholder="Ваше имя" disabled="disabled">
+        </section>
+        <section class="carousel-container">
+          <div class="carousel-wrapper" id="carousel">
+            <div class="carousel-item">
+              <picture>
+                <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/14/ya-schokolatje-1@1x.jpeg, images/14/ya-schokolatje-1@2x.jpeg 2x">
+                <source type="image/jpeg" media="(min-width: 768px)" srcset="images/14/ya-schokolatje-1@1x.jpeg, images/14/ya-schokolatje-1@2x.jpeg 2x">
+                <img src="images/14/ya-schokolatje-1@1x.jpeg" srcset="images/14/ya-schokolatje-1@2x.jpeg 2x" width="320" height="280" alt="Я – ШОКОЛАТЬЕ 6+">
+              </picture>
             </div>
-            <div class="form-field">
-              <label for="email" class="visually-hidden">E-mail:</label>
-              <input type="email" id="email" placeholder="Ваше e-mail" disabled="disabled">
+            <div class="carousel-item">
+              <picture>
+                <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/14/ya-schokolatje-2@1x.jpeg, images/14/ya-schokolatje-2@2x.jpeg 2x">
+                <source type="image/jpeg" media="(min-width: 768px)" srcset="images/14/ya-schokolatje-2@1x.jpeg, images/14/ya-schokolatje-2@2x.jpeg 2x">
+                <img src="images/14/ya-schokolatje-2@1x.jpeg" srcset="images/14/ya-schokolatje-2@2x.jpeg 2x" width="320" height="280" alt="Я – ШОКОЛАТЬЕ 6+">
+              </picture>
             </div>
-            <div class="form-field">
-              <label for="phone" class="visually-hidden">Ваш телефон:</label>
-              <input type="tel" id="phone" placeholder="Ваш телефон" disabled="disabled">
+            <div class="carousel-item">
+              <picture>
+                <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/14/ya-schokolatje-4@1x.jpeg, images/14/ya-schokolatje-4x@2x.jpeg 2x">
+                <source type="image/jpeg" media="(min-width: 768px)" srcset="images/14/ya-schokolatje-4@1x.jpeg, images/14/ya-schokolatje-4@2x.jpeg 2x">
+                <img src="images/14/ya-schokolatje-4@1x.jpeg" srcset="images/14/ya-schokolatje-4@2x.jpeg 2x" width="320" height="280" alt="Я – ШОКОЛАТЬЕ 6+">
+              </picture>
             </div>
-            <div class="form-field">
-              <label for="comment" class="textarea-label visually-hidden">Комментарий:</label>
-              <textarea id="comment" class="textarea-input" placeholder="Ваш комментарий...">
-              </textarea>
+            <div class="carousel-item">
+              <picture>
+                <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/14/ya-schokolatje-5@1x.jpeg, images/14/ya-schokolatje-5@2x.jpeg 2x">
+                <source type="image/jpeg" media="(min-width: 768px)" srcset="images/14/ya-schokolatje-5@1x.jpeg, images/14/ya-schokolatje-5@2x.jpeg 2x">
+                <img src="images/14/ya-schokolatje-5@1x.jpeg" srcset="images/14/ya-schokolatje-5@2x.jpeg 2x" width="320" height="280" alt="Я – ШОКОЛАТЬЕ 6+">
+              </picture>
             </div>
-            <a href="#" class="submit-button">Жду звонка</a>
-            <p class="feedback-container__checkbox checkbox">
-              <input type="checkbox" id="checkbox" class="checkbox-custom">
-              <label for="checkbox" class="checkbox-label">Отправляя сведения через электронную форму, Вы даёте согласие на обработку данных.</label>
-            </p>
           </div>
-        </div>
-      </section>
-    </main>
+          <div class="nav-button prev" id="prevBtn">&#8249;</div>
+          <div class="nav-button next" id="nextBtn">&#8250;</div>
+          <div class="indicator-container" id="indicatorContainer">
+              <!-- Indicators will be generated here -->
+          </div>
+        </section>
+        <section class="popup-call">
+          <div id="overlay" class="overlay"></div>
+          <div id="callbackPopup" class="popup-class">
+            <div class="popup-content">
+              <span id="closeCallbackPopup" class="close-button">&times;</span>
+              <h2 class="popup-content__title">Обратный звонок</h2>
+              <p class="popup-content__title__lowercase">Всегда готовы ответить на Ваши вопросы в телефонном режиме</p>
+              <form id="callbackForm" action="popup_call.php" method="POST">
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required><br>
+                <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required><br>
+                <button type="submit">Заказать обратный звонок</button>
+              </form>
+            </div>
+          </div>
+          <!-- Сообщение об успешной отправке -->
+          <div id="successMessagePopup" class="success-message-popup">
+              <p>Мы вам перезвоним!</p>
+              <span id="closeSuccessMessage" class="close-button">&times;</span>
+          </div>
+          <!-- Кнопка для открытия попапа -->
+          <a id="openPopupButton" class="fixed-button">
+            <svg class="fixed-button-svg" width="64px" height="64px" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#00cde2;}.cls-2{fill:#00a4b5;}</style></defs><title>Phone</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16A11.88,11.88,0,0,1,52.12,64H52a51.91,51.91,0,0,1-11.64-1.31A52,52,0,0,1,0,12,12.06,12.06,0,0,1,10.74.07,10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28l5.2,15.62a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76-2.65,2.65a4,4,0,0,0-.89,4.32A38.09,38.09,0,0,0,35.45,49.12a4,4,0,0,0,4.32-.89l2.65-2.65,2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/><path class="cls-2" d="M21.63,16.9a1.87,1.87,0,0,1-.45,1.92l-2.76,2.76L10.74.07A10.68,10.68,0,0,1,12,0h2.64a1.88,1.88,0,0,1,1.78,1.28Z"/><path class="cls-2" d="M64,49.35v2.76a11.11,11.11,0,0,1-.06,1.16L42.42,45.58l2.76-2.76a1.87,1.87,0,0,1,1.92-.45l15.62,5.2A1.88,1.88,0,0,1,64,49.35Z"/></g></g></svg>
+          </a>
+        </section>
+        <sectionc class="feedback">
+          <div class="form-container">
+            <form id="requestForm" method="POST" action="send.php">
+              <h2 class="feedback__title">Заявка</h2>
+              <p class="feedback__title__lowercase">для группового посещения от 25 человек. Если вы планируете посещение в индивидуальном порядке,
+                позвоните нам по телефону 89138387770</p>
+              
+              <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+              <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+              <textarea id="comment" name="comment" placeholder="Ваш коментарий" rows="2"></textarea>
+              <button type="submit" id="submitBtn">Отправить заявку на экскурсию</button>
+              <p id="statusMessage"></p>
+            </form>
+          </div>
+        </sectionc>
+        <section class="scroll">
+          <a href="#" class="back-to-top">
+            <svg width="42" higth="42" viewBox="0 0 24 24"><path d="M12 24a12 12 0 1 0-12-12 12.01 12.01 0 0 0 12 12Zm0-22a10 10 0 1 1-10 10 10.01 10.01 0 0 1 10-10Z"/><path d="M12 8a3 3 0 0 1 1.99.75l.84.78 2.87 2.82a1 1 0 1 1-1.4 1.43l-2.88-2.83c-.19-.19-.47-.44-.76-.7a1 1 0 0 0-1.32 0c-.3.26-.57.51-.75.7l-2.89 2.83a1 1 0 0 1-1.4-1.43l2.88-2.83c.2-.2.5-.48.83-.77a2.99 2.99 0 0 1 1.99-.75Z"/></svg>
+          </a>
+        </section>
+      </main>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <div class="page-footer__social social">
@@ -148,9 +187,9 @@
               <li class="copyright__item">
                 <a class="copyright__item--link" href="#">
                   <picture>
-                    <source type="image/png" media="(min-width: 1440px)" srcset="images/icons/logo@1x.png, images/icons/logo@2x.png 2x">
-                    <source type="image/png" media="(min-width: 768px)" srcset="images/icons/logo@1x.png, images/icons/logo@2x.png 2x">
-                    <img src="images/icons/logo@1x.png" srcset="images/icons/logo@2x.png 2x" width="100" height="100" alt="Logo polotage">
+                    <source type="image/png" media="(min-width: 1440px)" srcset="images/logo-footer@1x.png, images/logo-footer@2x.png 2x">
+                    <source type="image/png" media="(min-width: 768px)" srcset="images/logo-footer@1x.png, images/logo-footer@2x.png 2x">
+                    <img src="images/logo-footer@1x.png" srcset="images/logo-footer@2x.png 2x" width="100" height="100" alt="Logo polotage">
                   </picture>
                 </a>
               </li>
@@ -164,10 +203,10 @@
         </div>
       </footer>
     </div>
-    
+    <script src="scripts/popup.js"></script>
+    <script src="scripts/script.js"></script>
     <script src="scripts/back-to-top.js"></script>
-    <script src="scripts/share.js"></script>
-    <script src="scripts/popup_call.js"></script>
-    <script src="scripts/send__email.js"></script>
     <script src="scripts/index-slider.js"></script>
-</body></html>
+    <script src="scripts/share.js"></script>
+  </body>
+</html>
