@@ -71,10 +71,6 @@
   color: $base-color-text-black;
 }
 
-.popup-class input:hover {
-  border: 0.5px solid $bg-dark-blue
-  }
-
 .popup-content ::placeholder {
   font-size: 18px;
 }
@@ -86,19 +82,17 @@
 }
 
 .fixed-button-svg {
-  padding: 10px 20px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
   position: fixed;
-  bottom: 25px;
-  right: 170px;
+  bottom: 30px;
+  right: 40px;
+  width: 45px;
 }
 
 .fixed-button-svg:hover {
 opacity: 0.5;
 }
-
 
 .popup-content__title {
   font-family: $second-font;
@@ -165,8 +159,9 @@ opacity: 0.5;
   .fixed-button-svg {
     padding: 10px 20px;
     font-size: 32px;
-    bottom: 30px;
-    right: 83px;
+    bottom: 20px;
+    right: 95px;
+    width: 60px;
    }
 
 
@@ -231,8 +226,9 @@ opacity: 0.5;
   .fixed-button-svg {
     padding: 10px 20px;
     font-size: 32px;
-    bottom: 120px;
-    right: 52px;
+    bottom: 40px;
+    right: 48px;
+    width: 55px;
   }
 
 

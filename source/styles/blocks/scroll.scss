@@ -1,11 +1,12 @@
 .back-to-top {
   position: fixed;        /* Фиксируем кнопку на экране */
-  bottom: 142px;
-  right: 150px;           /* Отступ справа */
+  bottom: 155px;
+  right: 25px;           /* Отступ справа */
   padding: 10px 15px;     /* Внутренние отступы */
   display: none;          /* Скрываем кнопку по умолчанию */
   transition: opacity 0.3s ease-in-out; /* Плавное появление */
   z-index: 1000;          /* Обеспечиваем, что кнопка будет над остальными элементами */
+  fill: $base-color-text-grey;
 }
 
 .back-to-top:hover {
@@ -21,7 +22,7 @@
     padding: 15px;
     display: none;
     bottom: 112px;
-    right: 240px;         /* Отступ справа */
+    right: 50px;         /* Отступ справа */
   }
 
   .back-to-top svg {
@@ -35,7 +36,7 @@
     padding: 15px;
     display: none;
     bottom: 112px;
-    right: 138px;   /* Отступ справа */
+    right: 95px;   /* Отступ справа */
   }
 
   .back-to-top svg {
