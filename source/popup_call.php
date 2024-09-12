@@ -6,10 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Валидация полей
     if (!empty($name) && !empty($phone)) {
         // Адрес электронной почты для отправки
-        $to = "cieslikelena@gmail.com";  // замените на ваш email
+        $to = "krasdosug2008@mail.ru";  // замените на ваш email
         $subject = "Запрос на обратный звонок";
         $message = "Имя: $name\nТелефон: $phone";
-        $headers = "cieslikelena@gmail.com";  // замените на ваш домен
+        $headers = "krasdosug2008@mail.ru";  // замените на ваш домен
 
         // Отправка письма
         if (mail($to, $subject, $message, $headers)) {
