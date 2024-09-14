@@ -85,9 +85,8 @@
   border: none;
   cursor: pointer;
   position: fixed;
-  bottom: 30px;
-  right: 40px;
-  width: 45px;
+  bottom: 5%;
+  right: 7%;
 }
 
 .fixed-button-svg:hover {
@@ -158,12 +157,11 @@ opacity: 0.5;
 
   .fixed-button-svg {
     padding: 10px 20px;
-    font-size: 32px;
-    bottom: 20px;
-    right: 95px;
-    width: 60px;
-   }
-
+    width: 50px;
+    height: 50px;
+    bottom: 5%;
+    right: 10%;
+  }
 
   .popup-content__title {
     font-size: 32px;
@@ -227,8 +225,10 @@ opacity: 0.5;
     padding: 10px 20px;
     font-size: 32px;
     bottom: 40px;
-    right: 48px;
-    width: 55px;
+    bottom: 5%;
+    right: 5%;
+    width: 80px;
+    height: 80px;
   }
 
 
