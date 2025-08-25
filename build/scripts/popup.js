@@ -1,1 +1,53 @@
-document.addEventListener("DOMContentLoaded",function(){let n=document.getElementById("callbackPopup"),e=document.getElementById("overlay"),u=document.getElementById("openPopupButton"),a=document.getElementById("closeCallbackPopup"),s=document.getElementById("successMessagePopup"),p=document.getElementById("closeSuccessMessage"),c=document.getElementById("callbackForm");setTimeout(function(){l()},6e4);function l(){n.style.display="block",e.style.display="block"}function d(){n.style.display="none",e.style.display="none"}function i(){s.style.display="block",n.style.display="none",e.style.display="none"}a.addEventListener("click",d),e.addEventListener("click",d),p.addEventListener("click",function(){s.style.display="none",e.style.display="none"}),c.addEventListener("submit",function(o){o.preventDefault();let y=new FormData(c);fetch("popup_call.php",{method:"POST",body:y}).then(t=>t.text()).then(t=>{t==="success"?i():alert("\u041E\u0448\u0438\u0431\u043A\u0430 \u043F\u0440\u0438 \u043E\u0442\u043F\u0440\u0430\u0432\u043A\u0435")}).catch(t=>{console.error("\u041E\u0448\u0438\u0431\u043A\u0430:",t)})}),u.addEventListener("click",function(o){o.preventDefault(),l()})});
+// source/scripts/popup.js
+document.addEventListener("DOMContentLoaded", function() {
+  const popup = document.getElementById("callbackPopup");
+  const overlay = document.getElementById("overlay");
+  const openPopupButton = document.getElementById("openPopupButton");
+  const closePopupButton = document.getElementById("closeCallbackPopup");
+  const successMessage = document.getElementById("successMessagePopup");
+  const closeSuccessMessageButton = document.getElementById("closeSuccessMessage");
+  const form = document.getElementById("callbackForm");
+  setTimeout(function() {
+    openPopup();
+  }, 6e4);
+  function openPopup() {
+    popup.style.display = "block";
+    overlay.style.display = "block";
+  }
+  function closePopup() {
+    popup.style.display = "none";
+    overlay.style.display = "none";
+  }
+  function showSuccessMessage() {
+    successMessage.style.display = "block";
+    popup.style.display = "none";
+    overlay.style.display = "none";
+  }
+  closePopupButton.addEventListener("click", closePopup);
+  overlay.addEventListener("click", closePopup);
+  closeSuccessMessageButton.addEventListener("click", function() {
+    successMessage.style.display = "none";
+    overlay.style.display = "none";
+  });
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formData = new FormData(form);
+    fetch("popup_call.php", {
+      method: "POST",
+      body: formData
+    }).then((response) => response.text()).then((data) => {
+      if (data === "success") {
+        showSuccessMessage();
+      } else {
+        alert("\u041E\u0448\u0438\u0431\u043A\u0430 \u043F\u0440\u0438 \u043E\u0442\u043F\u0440\u0430\u0432\u043A\u0435");
+      }
+    }).catch((error) => {
+      console.error("\u041E\u0448\u0438\u0431\u043A\u0430:", error);
+    });
+  });
+  openPopupButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    openPopup();
+  });
+});
+//# sourceMappingURL=popup.js.map
