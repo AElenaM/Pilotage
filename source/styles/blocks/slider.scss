@@ -34,6 +34,15 @@
     object-fit: contain;
     padding-top: 20px;
 }
+  iframe {
+    width: 850px;
+    height: 550px;
+  }
+
+  .iframe-video {
+    width: 850px !important;
+    height: 550px !important;
+}
 }
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
@@ -61,6 +70,16 @@
       box-sizing: border-box;
       object-fit: contain;
   }
+
+    .iframe-video {
+    width: 850px !important;
+    height: 550px !important;
+}
+  iframe {
+    width: 850px;
+    height: 550px;
+  }
+
 }
 
 .carousel-wrapper {

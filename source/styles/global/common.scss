@@ -65,6 +65,7 @@ main {
     max-width: $desktop-max-width;
     padding: 40px;
   }
+
 }
 
 a {
@@ -160,7 +161,6 @@ input::placeholder {
 }
 
 .webpimg {
-  width: auto;
   height: 100%;
   object-fit: contain;
 }
