@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>"Высший пилотаж"</title>
+            <title>Отзывы</title>
+  <style>
+
+    .average-rating {
+      text-align: center;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .stars {
+      color: #FFD700;
+      font-size: 18px;
+      margin-left: 8px;
+    }
+    .review-form {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 20px auto;
+    }
+    .review-form input,
+    .review-form textarea,
+    .review-form button,
+    .review-form select {
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .review-form button {
+      background: #4CAF50;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .review-form button:hover {
+      background: #45a049;
+    }
+    .reviews {
+      margin: 20px auto;
+    }
+    .review {
+      background: #fff;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .review h3 {
+      margin: 0 0 5px 0;
+      font-size: 14px;
+      color: #333;
+    }
+    .review p {
+      margin: 0;
+      color: #555;
+    }
+
+    .form-contaner {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+    width: auto;
+    margin: 0;
+    align-items: center;
+     }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+     .form-container {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+        width: auto;
+        margin: 0;
+        align-items: center;}
+      }
+
+  </style>
+  </head>
+<body>
+
+  <div class="average-rating" id="averageRating">
+    Средняя оценка: пока нет отзывов
+  </div>
+
+  <div class="reviews" id="reviews"></div>
+
+  <div class="review-form">
+    <h2>Оставить отзыв</h2>
+    <form id="reviewForm">
+      <input type="text" id="name" placeholder="Ваше имя" required>
+      <textarea id="text" placeholder="Ваш отзыв" rows="4" required></textarea>
+      <label for="rating">Оценка экскурсии:</label>
+      <select id="rating" required>
+        <option value="">Выберите...</option>
+        <option value="1">⭐️</option>
+        <option value="2">⭐️⭐️</option>
+        <option value="3">⭐️⭐️⭐️</option>
+        <option value="4">⭐️⭐️⭐️⭐️</option>
+        <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+      </select>
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+  <script>
+    const form = document.getElementById("reviewForm");
+    const reviewsDiv = document.getElementById("reviews");
+    const avgDiv = document.getElementById("averageRating");
+
+    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+    function renderStars(count) {
+      return "⭐️".repeat(count);
+    }
+
+    function renderAverage() {
+      if (reviews.length === 0) {
+        avgDiv.textContent = "Средняя оценка: пока нет отзывов";
+        return;
+      }
+      const sum = reviews.reduce((acc, r) => acc + r.rating, 0);
+      const avg = (sum / reviews.length).toFixed(1);
+      avgDiv.innerHTML = Средняя оценка: ${renderStars(Math.round(avg))} (${avg} из 5);
+    }
+
+    function renderReviews() {
+      reviewsDiv.innerHTML = "";
+      reviews.forEach(r => {
+        const div = document.createElement("div");
+        div.className = "review";
+        div.innerHTML =
+          <h3>${r.name} <span class="stars">${renderStars(r.rating)}</span></h3>
+          <p>${r.text}</p>
+        ;
+        reviewsDiv.prepend(div);
+      });
+      renderAverage();
+    }
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const text = document.getElementById("text").value.trim();
+      const rating = parseInt(document.getElementById("rating").value);
+      if (name && text && rating) {
+        const review = { name, text, rating };
+        reviews.push(review);
+        localStorage.setItem("reviews", JSON.stringify(reviews));
+        renderReviews();
+        form.reset();
+      }
+    });
+
+    renderReviews();
+  </script>
+  </body>
+</html>
