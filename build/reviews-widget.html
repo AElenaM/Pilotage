@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="favicons/apple.png">
-    <link rel="manifest" href="manifest.webmanifest">
-    <title>"Высший пилотаж"</title>
-            <title>Отзывы</title>
-  <style>
-
-    .average-rating {
+<!DOCTYPE html><html class="page" lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="styles/styles.css"><link rel="icon" href="favicon.ico"><link rel="icon" href="favicons/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="favicons/apple.png"><link rel="manifest" href="manifest.webmanifest"><title>"Высший пилотаж"</title><title>Отзывы</title><style>.average-rating {
       text-align: center;
       background: #fff;
       border-radius: 10px;
@@ -90,37 +76,7 @@
         width: auto;
         margin: 0;
         align-items: center;}
-      }
-
-  </style>
-  </head>
-<body>
-
-  <div class="average-rating" id="averageRating">
-    Средняя оценка: пока нет отзывов
-  </div>
-
-  <div class="reviews" id="reviews"></div>
-
-  <div class="review-form">
-    <h2>Оставить отзыв</h2>
-    <form id="reviewForm">
-      <input type="text" id="name" placeholder="Ваше имя" required>
-      <textarea id="text" placeholder="Ваш отзыв" rows="4" required></textarea>
-      <label for="rating">Оценка экскурсии:</label>
-      <select id="rating" required>
-        <option value="">Выберите...</option>
-        <option value="1">⭐️</option>
-        <option value="2">⭐️⭐️</option>
-        <option value="3">⭐️⭐️⭐️</option>
-        <option value="4">⭐️⭐️⭐️⭐️</option>
-        <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
-      </select>
-      <button type="submit">Отправить</button>
-    </form>
-  </div>
-  <script>
-    const form = document.getElementById("reviewForm");
+      }</style></head><body><div class="average-rating" id="averageRating">Средняя оценка: пока нет отзывов</div><div class="reviews" id="reviews"></div><div class="review-form"><h2>Оставить отзыв</h2><form id="reviewForm"><input type="text" id="name" placeholder="Ваше имя" required> <textarea id="text" placeholder="Ваш отзыв" rows="4" required></textarea> <label for="rating">Оценка экскурсии:</label> <select id="rating" required><option value="">Выберите...</option><option value="1">⭐️</option><option value="2">⭐️⭐️</option><option value="3">⭐️⭐️⭐️</option><option value="4">⭐️⭐️⭐️⭐️</option><option value="5">⭐️⭐️⭐️⭐️⭐️</option></select> <button type="submit">Отправить</button></form></div><script>const form = document.getElementById("reviewForm");
     const reviewsDiv = document.getElementById("reviews");
     const avgDiv = document.getElementById("averageRating");
 
@@ -168,7 +124,4 @@
       }
     });
 
-    renderReviews();
-  </script>
-  </body>
-</html>
+    renderReviews();</script></body></html>
